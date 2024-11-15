@@ -8,16 +8,6 @@
 */
 
 /* Modal Styles */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    color: #fff;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
@@ -42,6 +32,15 @@
     object-fit: contain;
 }
 
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 
     .close-btn:hover,
