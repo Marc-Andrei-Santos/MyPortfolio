@@ -1,32 +1,36 @@
 using Microsoft.AspNetCore.Mvc;
 using MyPortfolio.Models;
-using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace MyPortfolio.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult DownloadCV()
         {
-            return View();
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files/MyCV.pdf");
+            var fileType = "application/pdf";
+            var fileName = "MyCV.pdf";
+
+            return PhysicalFile(filePath, fileType, fileName);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult Submit(ContactForm model)
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (ModelState.IsValid)
+            {
+                // Redirect back to the Index page
+                return RedirectToAction("Index");
+            }
+
+            // If form is invalid, return to Index view with model
+            return View("Index", model);
         }
     }
 }

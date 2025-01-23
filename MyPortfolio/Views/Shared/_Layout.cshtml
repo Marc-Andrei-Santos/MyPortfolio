@@ -4,65 +4,70 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MyPortfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
+
 <body>
 
     <!-- Header Section -->
     <header>
 
-        <div class="mx-auto px-0 sm:px-0 lg:px-1" style="width: 82%;">
+        <div class="mx-auto px-2 sm:px-4 lg:px-6" style="width: 82%;">
 
-            <nav class="px-4 py-4 flex items-center justify-between">
-                <a class="text-xl text-white font-bold logo" style="font-family: 'Poppins', sans-serif;">Portfolio</a>
+            <nav class="px-6 py-6 flex items-center justify-between">
+                <a class="text-2xl text-white font-bold logo" style="font-family: 'Poppins', sans-serif;">Portfolio</a>
 
-                <ul class="md:flex items-center gap-8 hidden">
+                <ul class="md:flex items-center gap-10 hidden">
                     <li>
-                        <a href="#" class="font-semibold text-white hover:text-primary trasition ease-in duration-200">Home</a>
+                        <a href="#" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Home</a>
                     </li>
                     <li>
-                        <a href="#about" class="font-semibold text-white hover:text-primary trasition ease-in duration-200">About</a>
+                        <a href="#about" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">About</a>
                     </li>
                     <li>
-                        <a href="#projects" class="font-semibold text-white hover:text-primary trasition ease-in duration-200">Projects</a>
+                        <a href="#projects" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Projects</a>
                     </li>
                     <li>
-                        <a href="#certifications" class="font-semibold text-white hover:text-primary trasition ease-in duration-200">Certifications</a>
+                        <a href="#certifications" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Certifications</a>
                     </li>
                     <li>
-                        <a href="#skills" class="font-semibold text-white hover:text-primary trasition ease-in duration-200">Skills</a>
+                        <a href="#skills" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Skills</a>
                     </li>
                     <li>
-                        <a href="#contact" class="font-semibold text-white hover:text-primary trasition ease-in duration-200">Contacts</a>
+                        <a href="#contact" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Contacts</a>
                     </li>
                 </ul>
+
                 <button class="block md:hidden group">
-                    <div class="w-6 h-1 bg-gray-200 mb-1"></div>
-                    <div class="w-6 h-1 bg-gray-200 mb-1"></div>
-                    <div class="w-6 h-1 bg-gray-200"></div>
-                    <ul class="absolute -right-full top-0 flex flex-col items-center bg-neutral h-screen w-8/12 pt-10 transform opacity-0 group-focus:right-0 group-focus:opacity-100 transition-all duration-500">
-                        <li class="py-6 hover:bg-primary transition ease-in duration-200 w-full">
-                            <a href="#" class="font-semibold text-white hover:text-white trasition ease-in duration-200">Home</a>
+                    <div class="w-8 h-1 bg-gray-200 mb-2"></div>
+                    <div class="w-8 h-1 bg-gray-200 mb-2"></div>
+                    <div class="w-8 h-1 bg-gray-200"></div>
+                    <ul class="absolute -right-full top-0 flex flex-col items-center bg-neutral h-screen w-9/12 pt-12 transform opacity-0 group-focus:right-0 group-focus:opacity-100 transition-all duration-500">
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#" class="font-semibold text-lg text-white hover:text-white transition ease-in duration-200">Home</a>
                         </li>
-                        <li class="py-6 hover:bg-primary transition ease-in duration-200 w-full">
-                            <a href="#about" class="font-semibold text-white hover:text-white trasition ease-in duration-200">About</a>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#about" class="font-semibold text-lg text-white hover:text-white transition ease-in duration-200">About</a>
                         </li>
-                        <li class="py-6 hover:bg-primary transition ease-in duration-200 w-full">
-                            <a href="#projects" class="font-semibold text-white hover:text-white trasition ease-in duration-200">Portfolio</a>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#projects" class="font-semibold text-lg text-white hover:text-white transition ease-in duration-200">Projects</a>
                         </li>
-                        <li class="py-6 hover:bg-primary transition ease-in duration-200 w-full">
-                            <a href="#certifications" class="font-semibold text-white hover:text-white trasition ease-in duration-200">Certifications</a>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#certifications" class="font-semibold text-lg text-white hover:text-white transition ease-in duration-200">Certifications</a>
                         </li>
-                        <li class="py-6 hover:bg-primary transition ease-in duration-200 w-full">
-                            <a href="#skills" class="font-semibold text-white hover:text-white trasition ease-in duration-200">Services</a>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#skills" class="font-semibold text-lg text-white hover:text-white transition ease-in duration-200">Skills</a>
                         </li>
-                        <li class="py-6 hover:bg-primary transition ease-in duration-200 w-full">
-                            <a href="#contact" class="font-semibold text-white hover:text-white trasition ease-in duration-200">Contacts</a>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#contact" class="font-semibold text-lg text-white hover:text-white transition ease-in duration-200">Contacts</a>
                         </li>
                     </ul>
                 </button>
             </nav>
         </div>
+
     </header>
 
             <div>
