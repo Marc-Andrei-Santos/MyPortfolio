@@ -3,78 +3,171 @@
 
 // Write your JavaScript code.
 
-// Function to open the modal and display the image
-function openModal(imageSrc) {
-    const modal = document.getElementById("imageModal");
-    const modalImage = document.getElementById("modalImage");
+// Menu bar in mobile
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+const closeBtn = document.getElementById('close-btn');
 
-    // Set the source of the image in the modal to the clicked image
-    modal.style.display = "flex";  // Show the modal
-    modalImage.src = `/images/${imageSrc}`;  // Set the src to the clicked image
+hamburger.addEventListener('click', () => {
+    mobileMenu.classList.add('active');
+});
+
+closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+});
+
+const menuItems = document.querySelectorAll('#mobile-menu a');
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+    });
+});
+
+function isMobile() {
+    return window.matchMedia("(max-width: 768px)").matches;
 }
 
-// Function to close the modal
-function closeModal() {
-    const modal = document.getElementById("imageModal");
-    modal.style.display = "none";  // Hide the modal
-}
 
-
-
-// Scroll Reveal Effect
-
-    ScrollReveal({
-        reset: true,
+const scrollOptions = {
     distance: '80px',
     duration: 1640,
-    delay: 200
-        });
+    delay: 200, 
+    useDelay: 'once',
+    interval: 50, 
+    reset: true 
+};
 
-    ScrollReveal().reveal('.hero-animate', {delay: 100, origin: 'left' });
-    ScrollReveal().reveal('.heroImg-animate', {delay: 150, origin: 'right' });
-    ScrollReveal().reveal('.about-animate', {delay: 200, origin: 'right' });
-    ScrollReveal().reveal('.aboutImg-animate', {delay: 250, origin: 'left' });
-    ScrollReveal().reveal('.icon img', {delay: 55, origin: 'bottom', interval: 150 });
-    ScrollReveal().reveal('.PTitle-animate', {delay: 100, origin: 'left' });
-    ScrollReveal().reveal('.PDesc-animate', {delay: 150, origin: 'right' });
-    ScrollReveal().reveal('.TTitle-animate', {delay: 100, origin: 'left' });
-    ScrollReveal().reveal('.TDesc-animate', {delay: 150, origin: 'right' });
-    ScrollReveal().reveal('.certi-1animate', {delay: 200, origin: 'left', distance: '100px' });
-    ScrollReveal().reveal('.certi-2animate', {delay: 200, origin: 'top', distance: '130px' });
-    ScrollReveal().reveal('.certi-3animate', {delay: 200, origin: 'right', distance: '100px' });
-    ScrollReveal().reveal('.certi-4animate', {delay: 200, origin: 'bottom', distance: '100px' });
-    ScrollReveal().reveal('.certi-5animate', {delay: 200, origin: 'bottom', distance: '100px' });
-    ScrollReveal().reveal('.STitle-animate', {delay: 100, origin: 'left' });
-    ScrollReveal().reveal('.SDesc-animate', {delay: 150, origin: 'right' });
-    ScrollReveal().reveal('.CTitle-animate', {delay: 100, origin: 'left' });
-    ScrollReveal().reveal('.CDesc-animate', {delay: 150, origin: 'right' });
-    ScrollReveal().reveal('.contact-animate', {delay: 150, origin: 'left' });
-    ScrollReveal().reveal('.form-animate', {delay: 200, origin: 'right' });
-    ScrollReveal().reveal('.footer-animate a', {delay: 150, origin: 'left', interval: 50 });
+const mobileScrollOptions = {
+    distance: '80px',
+    duration: 1340,
+    delay: 0, 
+    useDelay: 'none',
+    interval: 20,
+    reset: true 
+};
 
 
-    $('.responsive').slick({
-        dots: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-    {
-        breakpoint: 1024,
-    settings: {
-        slidesToShow: 2,
-    slidesToScroll: 1,
-    infinite: true,
-    dots: true
-                    }
-                },
-    {
-        breakpoint: 480,
-    settings: {
-        slidesToShow: 1,
-    slidesToScroll: 1
-                    }
-                }
-    ]
-        });
+// SCROLL EFFECTS
+
+function initializeScrollReveal() {
+    const options = isMobile() ? mobileScrollOptions : scrollOptions;
+    const reveals = [
+        ['.hero-animate', { origin: 'left' }],
+        ['.heroImg-animate', { origin: 'right' }],
+        ['.about-animate', { origin: 'right' }],
+        ['.aboutImg-animate', { origin: 'left' }],
+        ['.icon img', { origin: 'bottom', interval: 150 }],
+        ['.PTitle-animate', { origin: 'left' }],
+        ['.PDesc-animate', { origin: 'right' }],
+        ['.TTitle-animate', { origin: 'left' }],
+        ['.TDesc-animate', { origin: 'right' }],
+        ['.ADesc-animate', { origin: 'bottom' }],
+        ['.certi-1animate', { origin: 'left', distance: '100px' }],
+        ['.certi-2animate', { origin: 'top', distance: '130px' }],
+        ['.certi-3animate', { origin: 'right', distance: '100px' }],
+        ['.certi-4animate', { origin: 'bottom', distance: '100px' }],
+        ['.certi-5animate', { origin: 'bottom', distance: '100px' }],
+        ['.contact-head', { origin: 'left', distance: '100px' }],
+        ['.contact-desc', { origin: 'right', distance: '100px' }],
+        ['.gif-animate', { origin: 'left', distance: '100px' }],
+        ['.contact-animate', { origin: 'right', distance: '100px' }],
+        ['.STitle-animate', { origin: 'left' }],
+        ['.SDesc-animate', { origin: 'right' }],
+        ['.CTitle-animate', { origin: 'left' }],
+        ['.CDesc-animate', { origin: 'right' }],
+        ['.form-animate', { origin: 'right' }],
+        ['.footer-animate a', { origin: 'left', interval: 50 }],
+        ['.experience-header-animate', { origin: 'bottom' }],
+        ['.experience-animate', { origin: 'top' }]
+    ];
+
+    reveals.forEach(([selector, opts]) => ScrollReveal(options).reveal(selector, opts));
+}
+
+function setupExperienceObserver() {
+    const section = document.getElementById('experience-cross-anim');
+    if (!section) return;
+
+    new IntersectionObserver(
+        ([entry]) => {
+            section.classList.toggle('experience-cross-anim-active', entry.isIntersecting);
+        },
+        { threshold: 0.3 }
+    ).observe(section);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeScrollReveal();
+    setupExperienceObserver();
+});
+
+
+// PROJECTS MODAL
+
+function openProjectModal(videoUrl) {
+    const modal = document.getElementById('projectModal');
+    const videoContainer = document.getElementById('projectVideoIframe');
+    const title = document.getElementById('projectModalTitle');
+
+    videoContainer.innerHTML = `
+        <video controls class="w-full max-h-full rounded" style="object-fit: contain;">
+            <source src="${videoUrl}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    `;
+
+    if (videoUrl.includes('portfolio.mp4') || videoUrl.includes('portfoliodemo.mp4')) {
+        title.textContent = 'Personal Portfolio Demo';
+    } else if (videoUrl.includes('salestracker.mp4') || videoUrl.includes('food_sales.mp4')) {
+        title.textContent = 'Food Sales Tracking System Demo';
+    } else {
+        title.textContent = 'Project Preview';
+    }
+
+    modal.classList.remove('hidden');
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    const videoContainer = document.getElementById('projectVideoIframe');
+    videoContainer.innerHTML = '';
+    modal.classList.add('hidden');
+}
+
+document.getElementById('projectModal').addEventListener('click', function (event) {
+    if (event.target === this) {
+        closeProjectModal();
+    }
+});
+
+function alignModalForMobile() {
+    const modal = document.querySelector('#projectModal > div');
+    if (window.innerWidth <= 640) {
+        modal.style.marginLeft = '0';
+        modal.style.marginRight = 'auto';
+    } else {
+        modal.style.marginLeft = 'auto';
+        modal.style.marginRight = 'auto';
+    }
+}
+
+window.addEventListener('load', alignModalForMobile);
+window.addEventListener('resize', alignModalForMobile);
+
+// CERTIFICATES MODAL
+
+function openCertificatePreview(imageFileName) {
+  const modal = document.getElementById("certificatePreviewModal");
+  const image = document.getElementById("certificatePreviewImage");
+
+  modal.style.display = "flex";
+  image.src = `/images/${imageFileName}`;
+  document.body.style.overflow = "hidden";
+}
+
+function closeCertificatePreview() {
+  document.getElementById("certificatePreviewModal").style.display = "none";
+  document.body.style.overflow = "auto"; 
+}
+
+

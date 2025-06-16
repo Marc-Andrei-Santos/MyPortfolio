@@ -13,24 +13,13 @@ namespace MyPortfolio.Controllers
 
         public IActionResult DownloadCV()
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files/MyCV.pdf");
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files/Resume.pdf");
             var fileType = "application/pdf";
-            var fileName = "MyCV.pdf";
+            var fileName = "Resume.pdf";
 
             return PhysicalFile(filePath, fileType, fileName);
         }
 
-        [HttpPost]
-        public IActionResult Submit(ContactForm model)
-        {
-            if (ModelState.IsValid)
-            {
-                // Redirect back to the Index page
-                return RedirectToAction("Index");
-            }
-
-            // If form is invalid, return to Index view with model
-            return View("Index", model);
-        }
+      
     }
 }
