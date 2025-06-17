@@ -128,13 +128,37 @@ html, body {
     justify-content: center;
     align-items: center;
     overflow-y: auto;
+    padding: 1rem;
 }
 
 .certificate-modal-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 20em;
+    gap: 5em; 
+    flex-wrap: wrap;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .certificate-modal-wrapper {
+        flex-direction: column;
+        gap: 1.5em;
+        width: 100%;
+        align-items: center;
+    }
+
+    .certificate-modal-image {
+        width: 100%;
+        height: auto;
+        max-height: 60vh;
+    }
+
+    .certificate-close-btn {
+        width: 90%;
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+    }
 }
 
 .certificate-modal-image,
@@ -176,6 +200,7 @@ html, body {
     .close-cert-btn:hover {
         background-color: #374151;
     }
+
 
 /* === Certificate Cards === */
 .certificate-inner:hover,

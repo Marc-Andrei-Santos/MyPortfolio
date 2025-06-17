@@ -13,7 +13,7 @@ namespace MyPortfolio.Controllers
 
         public IActionResult DownloadCV()
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files/Resume.pdf");
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/files/MARC_ANDREI_SANTOS_CV.pdf");
             var fileType = "application/pdf";
             var fileName = "Resume.pdf";
 
