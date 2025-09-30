@@ -9,7 +9,7 @@
 
             <div class="md:w-1/2 text-center md:text-left md:mt-10 hero-animate">
                 
-                <h2 class="lg:text-6xl md:text-4xl text-3xl font-semibold py-3 hero-text text-white">I Build and Design Web Platforms with ASP.NET Core MVC</h2>
+                <h2 class="lg:text-6xl md:text-4xl text-3xl font-semibold py-3 hero-text text-white">I Build and Design Web Platforms with .NET Technologies</h2>
                 <p class="mb-8 text-gray-400 leading-relaxed">Welcome to my Portfolio! You can download my CV below.</p>
             <a class="py-2 px-4 bg-primary dark:bg-primary dark:hover:bg-gray-700 dark:border-gray-700 text-white font-semibold rounded transition
             ease-in duration-200" href="/Home/DownloadCV"> Download CV
@@ -17,7 +17,7 @@
 
             </div>
             <div class="heroImg-animate">
-                <img class="md:flex hidden -mb-40" src="~/images/picgrad.jpg" alt="Me">
+                <img class="md:flex hidden -mb-40" src="~/images/2.jpg" alt="Me">
             </div>
         </div>
         <br />
@@ -28,7 +28,7 @@
 <section id="about" class="bg-black/5">
     <div class="max-w-screen-lg mx-auto py-16 px-4 flex flex-col md:flex-row gap-2 items-center justify-center">
         <div class="aboutImg-animate md:pr-1 w-full md:w-1/2 flex justify-center md:justify-end">
-            <img src="~/images/low mb grad.png"
+            <img src="~/images/blurr.jpg"
                  alt="Marc"
                  class="object-cover rounded-xl"
                  style="width: 320px; height: 340px;" />
@@ -183,8 +183,8 @@
                 <div class="p-4 text-center">
                     <h3 class="text-2xl font-bold text-white mb-2">Sales Tracking System</h3>
                     <p class="text-gray-300 mb-4">
-                        A sales and expense tracking system built as a freelance project using ASP.NET Core MVC to manage transactions and generate reports
-                        and charts.
+                        A sales tracking system built as a freelance project using ASP.NET Core MVC to manage transactions and generate reports
+                        and charts. This system is built for my client's food business.
                     </p>
                     <hr class="border-gray-600 mb-4" />
                     <div class="flex justify-center space-x-4">
@@ -210,8 +210,6 @@
         <div class="relative flex flex-col w-full p-4 bg-gray-800 rounded-lg shadow-xl"
              style="max-width:100vw; max-height:100vh; overflow-y:auto; position:fixed; top:50%; left:0; transform:translateY(-50%); z-index:1000;">
 
-
-            <!-- Close Button -->
             <button aria-label="Close Modal" onclick="closeProjectModal()"
                     class="absolute top-2 right-2 z-10 text-3xl font-bold text-white hover:text-gray-400">
                 ×
@@ -230,126 +228,170 @@
             </div>
         </div>
     </div>
-
-
 </section>
+
+<!-- Education Section -->
+<section id="education" class="bg-gray-900">
+    <div class="max-w-screen-xl mx-auto py-16 px-4">
+        <div class="text-center mb-12">
+            <h2 class="md:text-4xl text-3xl font-bold text-white mb-3 STitle-animate">Education</h2>
+            <p class="text-gray-300 leading-relaxed SDesc-animate">
+                My academic background and training that helped me build a strong foundation in programming.
+            </p>
+        </div>
+
+        <div class="flex flex-col space-y-16">
+
+            <div class="bg-gradient-to-br from-blue-200/60 via-pink-200/60 to-purple-200/60 p-1 rounded-2xl shadow-xl transition-transform hover:scale-[1.025] STitle-animate">
+                <div class="flex flex-col md:flex-row items-center justify-center bg-black/40 rounded-2xl py-12 px-8 min-h-[320px] w-full mx-auto backdrop-blur-md bg-opacity-60">
+
+                    <div class="w-full md:w-1/2 flex justify-center md:justify-start mb-6 md:mb-0">
+                        <img src="~/images/diploma.jpg"
+                             alt="BSIT Diploma - Mindoro State University"
+                             class="w-full max-w-md h-auto rounded-lg border-4 border-primary shadow-lg bg-white" />
+                    </div>
+
+                    <div class="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center px-4">
+                        <h3 class="text-2xl font-semibold text-white mb-1">Mindoro State University</h3>
+                        <span class="text-primary font-medium block">Bachelor of Science in Information Technology (BSIT)</span>
+                        <div class="text-gray-300 text-sm mb-3">August 2020 - June 2025</div>
+                        <p class="text-gray-100">
+                            Completed a four-year Information Technology course that provided comprehensive knowledge in software development,
+                            database management, networking, and web applications.
+                            This emphasized learning through projects and collaborations, preparing me for real-world IT solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-200/60 via-pink-200/60 to-purple-200/60 p-1 rounded-2xl shadow-xl transition-transform hover:scale-[1.025] STitle-animate">
+                <div class="flex flex-col md:flex-row items-center justify-center bg-black/40 rounded-2xl py-12 px-8 min-h-[320px] w-full mx-auto backdrop-blur-md bg-opacity-60">
+
+                    <div class="w-full md:w-1/2 flex justify-center md:justify-start mb-6 md:mb-0">
+                        <img src="~/images/bcrvcerti.png"
+                             alt="TESDA Java Programming Certificate"
+                             class="w-full max-w-md h-auto rounded-lg border-4 border-primary shadow-lg bg-white" />
+                    </div>
+
+                    <div class="w-full md:w-1/2 text-center md:text-left flex flex-col justify-center px-4">
+                        <h3 class="text-2xl font-semibold text-white mb-1">BCRV Tech-Voc, Inc.</h3>
+                        <span class="text-primary font-medium block">TESDA Java Programming Course</span>
+                        <div class="text-gray-300 text-sm mb-3">October 2024 - November 2024</div>
+                        <p class="text-gray-100">
+                            Completed hands-on training on Java programming fundamentals and object-oriented design.
+                            The course also covered practical coding projects, which enhanced my skills
+                            in building real-world applications using Java.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 
 
 <!-- Experience Section -->
 
 <section id="experience" class="bg-gradient-to-br from-primary to-black">
-  <div class="max-w-screen-xl mx-auto py-16 px-4">
-    <div class="text-center mb-12">
+    <div class="max-w-screen-xl mx-auto py-16 px-4">
+        <div class="text-center mb-12">
             <h2 class="md:text-4xl text-3xl font-bold text-white mb-3 STitle-animate">Experience</h2>
             <p class="text-gray-200 leading-relaxed SDesc-animate">
-        Here are some of my project-based experiences.
-      </p>
+                Here are some of my project-based experiences.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-x-24">
+           
+            <!-- Experience 1: Software Developer -->
+            <div class="bg-gradient-to-br from-blue-200/60 via-pink-200/60 to-purple-200/60 p-1 rounded-2xl shadow-xl transition-transform hover:scale-[1.025] PDesc-animate">
+                <div class="flex flex-col md:flex-row items-center bg-black/40 rounded-2xl py-12 px-14 min-h-[280px] max-w-3xl w-full mx-auto backdrop-blur-md bg-opacity-60">
+                    <img src="~/images/softdev.jpg"
+                         alt="Software Developer"
+                         class="w-48 h-48 rounded-full object-cover border-4 border-primary shadow-lg bg-white mb-6 md:mb-0 md:mr-12" />
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-2xl font-semibold text-white mb-1">Software Developer</h3>
+                        <span class="text-primary font-medium block">
+                            H2 Software Consulting Services<br />
+                            <span class="text-gray-300 text-sm">Manila, Pasig, Philippines</span>
+                        </span>
+                        <div class="text-gray-300 text-sm mb-3">August 2025 - Present</div>
+
+                        <p class="text-gray-100">
+                            Developed and maintained web applications, collaborated with the team to implement new features, optimized existing code for better performance, and ensured high-quality software delivery according to project requirements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 2: Freelance .Net Developer -->
+            <div class="bg-gradient-to-br from-blue-200/60 via-pink-200/60 to-purple-200/60 p-1 rounded-2xl shadow-xl transition-transform hover:scale-[1.025] PDesc-animate">
+                <div class="flex flex-col md:flex-row items-center bg-black/40 rounded-2xl py-12 px-14 min-h-[280px] max-w-3xl w-full mx-auto backdrop-blur-md bg-opacity-60">
+                    <img src="~/images/me.png"
+                         alt=".Net MVC Developer"
+                         class="w-48 h-48 rounded-full object-cover border-4 border-primary shadow-lg bg-white mb-6 md:mb-0 md:mr-12" />
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-2xl font-semibold text-white mb-1">Freelance .Net Developer</h3>
+                        <span class="text-primary font-medium block">
+                            Self-Employed<br />
+                            <span class="text-gray-300 text-sm">Calapan City, Oriental Mindoro, Philippines</span>
+                        </span>
+                        <div class="text-gray-300 text-sm mb-3">2025 – Present</div>
+
+                        <p class="text-gray-100">
+                            Developed web applications as a freelance web developer, working with HTML, CSS, and JavaScript to build interactive web interfaces, and Entity Framework for database management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 3: Desktop Engineer Intern -->
+            <div class="bg-gradient-to-br from-blue-200/60 via-pink-200/60 to-purple-200/60 p-1 rounded-2xl shadow-xl transition-transform hover:scale-[1.025] TTitle-animate">
+                <div class="flex flex-col md:flex-row items-center bg-black/40 rounded-2xl py-12 px-14 min-h-[280px] max-w-3xl w-full mx-auto backdrop-blur-md bg-opacity-60">
+                    <img src="~/images/exp1.png"
+                         alt="Desktop Engineer Intern"
+                         class="w-48 h-48 rounded-full object-cover border-4 border-primary shadow-lg bg-white mb-6 md:mb-0 md:mr-12" />
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-2xl font-semibold text-white mb-1">Desktop Engineer Intern</h3>
+                        <span class="text-primary font-medium block">
+                            Teleperformance Inc.<br />
+                            <span class="text-gray-300 text-sm">Makati City, Metro Manila, Philippines</span>
+                        </span>
+                        <div class="text-gray-300 text-sm mb-3">February 2025 – May 2025</div>
+
+                        <p class="text-gray-100">
+                            Assisted in troubleshooting both hardware and software issues, and helped configure user systems and devices to ensure stable performance and maintain productivity for daily business operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 4: Graphic Designer Intern -->
+            <div class="bg-gradient-to-br from-blue-200/60 via-pink-200/60 to-purple-200/60 p-1 rounded-2xl shadow-xl transition-transform hover:scale-[1.025] TTitle-animate">
+                <div class="flex flex-col md:flex-row items-center bg-black/40 rounded-2xl py-12 px-14 min-h-[280px] max-w-3xl w-full mx-auto backdrop-blur-md bg-opacity-60">
+                    <img src="~/images/exp3.jpg"
+                         alt="Graphic Designer"
+                         class="w-48 h-48 rounded-full object-cover border-4 border-primary shadow-lg bg-white mb-6 md:mb-0 md:mr-12" />
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-2xl font-semibold text-white mb-1">Graphic Designer Intern</h3>
+                        <span class="text-primary font-medium block">
+                            Ollopa Corp.<br />
+                            <span class="text-gray-300 text-sm">Quezon City, Metro Manila, Philippines</span>
+                        </span>
+                        <div class="text-gray-300 text-sm mb-3">November 2024 – December 2024</div>
+
+                        <p class="text-gray-100">
+                            Created digital graphics, logo designs, and social media visuals, collaborating closely with the team to deliver consistent and high-quality branding assets across multiple platforms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-x-24">
-
-      <!-- Experience 1 -->
-      <div class="bg-gradient-to-br from-blue-200/60 via-pink-200/60 to-purple-200/60 p-1 rounded-2xl shadow-xl transition-transform hover:scale-[1.025] TTitle-animate">
-        <div
-          class="flex flex-col md:flex-row items-center bg-black/40 rounded-2xl py-12 px-14 min-h-[280px] max-w-3xl w-full mx-auto backdrop-blur-md bg-opacity-60"
-        >
-          <img
-            src="~/images/exp1.png"
-            alt="Desktop Engineer Intern"
-            class="w-48 h-48 rounded-full object-cover border-4 border-primary shadow-lg bg-white mb-6 md:mb-0 md:mr-12"
-          />
-          <div class="flex-1 text-center md:text-left">
-            <h3 class="text-2xl font-semibold text-white mb-1">Desktop Engineer Intern</h3>
-            <span class="text-primary font-medium block">
-              Teleperformance Inc.<br />
-              <span class="text-gray-300 text-sm">Makati City, Metro Manila, Philippines</span>
-            </span>
-            <div class="text-gray-300 text-sm mb-3">February 2025 – May 2025</div>
-
-            <p class="text-gray-100">
-              Assisted in troubleshooting both hardware and software issues, and helped configure user systems and devices to ensure stable performance and maintain productivity for daily business operations.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Experience 2 -->
-      <div class="bg-gradient-to-br from-blue-200/60 via-pink-200/60 to-purple-200/60 p-1 rounded-2xl shadow-xl transition-transform hover:scale-[1.025] PDesc-animate">
-        <div
-          class="flex flex-col md:flex-row items-center bg-black/40 rounded-2xl py-12 px-14 min-h-[280px] max-w-3xl w-full mx-auto backdrop-blur-md bg-opacity-60"
-        >
-          <img
-            src="~/images/me.png"
-            alt=".Net MVC Developer"
-            class="w-48 h-48 rounded-full object-cover border-4 border-primary shadow-lg bg-white mb-6 md:mb-0 md:mr-12"
-          />
-          <div class="flex-1 text-center md:text-left">
-            <h3 class="text-2xl font-semibold text-white mb-1">Freelance .Net Developer</h3>
-            <span class="text-primary font-medium block">
-              Self-Employed<br />
-              <span class="text-gray-300 text-sm">Calapan City, Oriental Mindoro, Philippines</span>
-            </span>
-            <div class="text-gray-300 text-sm mb-3">2025 – Present</div>
-
-            <p class="text-gray-100">
-              Developed web applications as a freelance web developer, working with HTML, CSS, and JavaScript to build interactive web interfaces, and Entity Framework for database management.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Experience 3 -->
-      <div class="bg-gradient-to-br from-blue-200/60 via-pink-200/60 to-purple-200/60 p-1 rounded-2xl shadow-xl transition-transform hover:scale-[1.025] TTitle-animate">
-        <div
-          class="flex flex-col md:flex-row items-center bg-black/40 rounded-2xl py-12 px-14 min-h-[280px] max-w-3xl w-full mx-auto backdrop-blur-md bg-opacity-60"
-        >
-          <img
-            src="~/images/exp3.jpg"
-            alt="Graphic Designer"
-            class="w-48 h-48 rounded-full object-cover border-4 border-primary shadow-lg bg-white mb-6 md:mb-0 md:mr-12"
-          />
-          <div class="flex-1 text-center md:text-left">
-            <h3 class="text-2xl font-semibold text-white mb-1">Graphic Designer Intern</h3>
-            <span class="text-primary font-medium block">
-              Ollopa Corp.<br />
-              <span class="text-gray-300 text-sm">Quezon City, Metro Manila, Philippines</span>
-            </span>
-            <div class="text-gray-300 text-sm mb-3">November 2024 – December 2024</div>
-
-            <p class="text-gray-100">
-              Created digital graphics, logo designs, and social media visuals, collaborating closely with the team to deliver consistent and high-quality branding assets across multiple platforms.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Experience 4 -->
-      <div class="bg-gradient-to-br from-blue-200/60 via-pink-200/60 to-purple-200/60 p-1 rounded-2xl shadow-xl transition-transform hover:scale-[1.025] PDesc-animate">
-        <div
-          class="flex flex-col md:flex-row items-center bg-black/40 rounded-2xl py-12 px-14 min-h-[280px] max-w-3xl w-full mx-auto backdrop-blur-md bg-opacity-60"
-        >
-          <img
-            src="~/images/exp4.png"
-            alt="Java Programming Trainee"
-            class="w-48 h-48 rounded-full object-cover border-4 border-primary shadow-lg bg-white mb-6 md:mb-0 md:mr-12"
-          />
-          <div class="flex-1 text-center md:text-left">
-            <h3 class="text-2xl font-semibold text-white mb-1">Java Programming Trainee</h3>
-            <span class="text-primary font-medium block">
-              BCRV Tech-Voc, Inc.<br />
-              <span class="text-gray-300 text-sm">Calapan City, Oriental Mindoro, Philippines</span>
-            </span>
-            <div class="text-gray-300 text-sm mb-3">September 2024 – November 2024</div>
-
-            <p class="text-gray-100">
-              Completed hands-on training in Java fundamentals, including object-oriented design principles, data structures, and the development of console-based applications,
-            </p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
 </section>
 
 

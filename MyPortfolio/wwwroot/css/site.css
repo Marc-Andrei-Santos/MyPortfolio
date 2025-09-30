@@ -682,7 +682,7 @@ html {
     }
 
     .btn:is(input[type="checkbox"]):after,
-    .btn:is(input[type="radio"]):after {
+    .btn:is(input[type="radio"]):after { 
         content: attr(aria-label);
     }
 
