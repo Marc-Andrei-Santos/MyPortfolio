@@ -277,19 +277,16 @@ html, body {
     fill: #333;
 }
 
-
 /* === Hero Image Animation === */
 .heroImg-animate img {
-    width: 604px;
-    height: 604px;
+    width: 580px;
+    height: 580px;
     border-radius: 50%;
     object-fit: cover;
     transform: scale(0.97);
     margin-left: 200px;
     margin-top: -80px;
 }
-
-
 
 img,
 svg,
