@@ -2,7 +2,7 @@
     Layout = "_Layout"; 
 }
 
-    <!-- Home Section -->
+<!-- Home Section -->
  <section id="home" class="bg-neutral mt-14 md:mt-0">
 
      <div class="max-w-screen-xl mx-auto md:py-52 py-32 px-4 flex flex-col md:flex-row items-center md:gap-12">
@@ -26,33 +26,54 @@
     </section>
 
 <!-- About Section -->
+
 <section id="about" class="bg-black/5">
-    <div class="max-w-screen-lg mx-auto py-16 px-4 flex flex-col md:flex-row gap-2 items-center justify-center">
-        <div class="aboutImg-animate md:pr-1 w-full md:w-1/2 flex justify-center md:justify-end">
+    <div class="max-w-screen-lg mx-auto py-16 px-4 flex flex-col md:flex-row gap-8 items-center justify-center">
+
+        <div class="aboutImg-animate md:pr-1 w-full md:w-1/2 flex flex-col items-center md:items-end gap-6">
+
             <img src="~/images/grad.jpg"
                  alt="Marc"
                  class="object-cover rounded-xl"
                  style="width: 320px; height: 340px;" />
+
+            <div class="social-links flex flex-row gap-7 text-white text-3xl">
+                <!-- Facebook -->
+                <a href="https://facebook.com/yourprofile" target="_blank" class="hover:text-blue-500 transition">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="https://instagram.com/yourprofile" target="_blank" class="hover:text-pink-500 transition">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/yourprofile" target="_blank" class="hover:text-gray-400 transition">
+                    <i class="fab fa-github"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-blue-400 transition">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
         </div>
 
+        <!-- Description -->
         <div class="text-center md:text-left about-animate w-full md:w-1/2 md:pl-1">
             <h3 class="md:text-4xl text-3xl font-bold text-white about-text">
                 Marc Andrei Santos
             </h3>
-            <p class="text-primary font-semibold mb-8 text-xl">About Me</p>
-            <p class="text-gray-400 leading-relaxed mb-5">
-                Hi, I'm Marc Andrei Santos, a passionate web developer specializing in
-                ASP.NET Core MVC. I have experienced building web applications and I'm
-                also familiar with front-end technologies such as HTML, CSS, and
-                JavaScript.
-            </p>
 
-            <div class="social-links flex flex-row flex-wrap justify-center md:justify-start gap-4 mt-6">
-                <!-- Social links here -->
-            </div>
+            <p class="text-primary font-semibold mb-8 text-xl">About Me</p>
+
+            <p class="text-gray-400 leading-relaxed mb-5">
+                Hi, I'm Marc Andrei Santos, a passionate .NET developer specializing in
+                ASP.NET Core MVC. I have experience building web applications and I'm
+                also familiar with front-end technologies such as HTML, CSS, and JavaScript.
+            </p>
         </div>
     </div>
 </section>
+
 
 
 <!-- Tools Section -->
