@@ -154,6 +154,7 @@ function alignModalForMobile() {
 window.addEventListener('load', alignModalForMobile);
 window.addEventListener('resize', alignModalForMobile);
 
+
 // CERTIFICATES MODAL
 
 function openCertificatePreview(imageFileName) {
