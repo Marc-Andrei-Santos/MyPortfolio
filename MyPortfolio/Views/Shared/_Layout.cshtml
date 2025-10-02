@@ -5,79 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MyPortfolio</title>
 
-    <!-- CSS (Load First) -->
+    <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-</head>
 
+</head>
 <body class="bg-black">
 
-    <!-- Header Section -->
-    <header>
-        <div class="mx-auto px-2 sm:px-4 lg:px-6" style="width: 82%;">
-            <nav class="px-6 py-6 flex items-center justify-between">
-                <a class="text-2xl text-white font-bold logo" style="font-family: 'Poppins', sans-serif;">Portfolio</a>
-
-                <ul class="md:flex items-center gap-10 hidden">
-                    <li><a href="#" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Home</a></li>
-                    <li><a href="#about" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">About</a></li>
-                    <li><a href="#projects" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Projects</a></li>
-                    <li><a href="#education" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Education</a></li>
-                    <li><a href="#experience" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Experience</a></li>
-                    <li><a href="#certifications" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Certifications</a></li>
-                    <li><a href="#skills" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Skills</a></li>
-                    <li><a href="#contact" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Contacts</a></li>
-                </ul>
-
-                <!-- Hamburger Icon for Mobile -->
-                <button class="block md:hidden group relative" id="hamburger">
-                    <div class="w-8 h-1 bg-gray-200 mb-2"></div>
-                    <div class="w-8 h-1 bg-gray-200 mb-2"></div>
-                    <div class="w-8 h-1 bg-gray-200"></div>
-                </button>
-
-                <!-- Mobile Menu -->
-                <ul id="mobile-menu" class="absolute top-0 right-0 w-9/12 bg-neutral h-screen transform -translate-x-full opacity-0 transition-all duration-500 flex flex-col items-center pt-12">
-                    <button id="close-btn" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
-                    <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
-                        <a href="#" class="font-semibold text-lg text-white">Home</a>
-                    </li>
-                    <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
-                        <a href="#about" class="font-semibold text-lg text-white">About</a>
-                    </li>
-                    <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
-                        <a href="#projects" class="font-semibold  text-lg text-white">Projects</a>
-                    </li>
-                    <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
-                        <a href="#education" class="font-semibold  text-lg text-white">Education</a>
-                    </li>
-                    <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
-                        <a href="#certifications" class="font-semibold text-lg text-white">Certifications</a>
-                    </li>
-                    <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
-                        <a href="#skills" class="font-semibold text-lg text-white">Skills</a>
-                    </li>
-                    <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
-                        <a href="#contact" class="font-semibold text-lg text-white">Contacts</a>
-                    </li>
-                </ul>
-            </nav>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="ladder-loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </header>
+    </div>
 
-    <!-- Main Content -->
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
 
-    <!-- Scripts (Load Last for Performance) -->
+    <div id="site-wrapper" class="site-wrapper">
+        <!-- Header Section -->
+        <header>
+            <div class="mx-auto px-2 sm:px-4 lg:px-6" style="width: 82%;">
+                <nav class="px-6 py-6 flex items-center justify-between">
+                    <a class="text-2xl text-white font-bold logo" style="font-family: 'Poppins', sans-serif;">Portfolio</a>
+
+                    <ul class="md:flex items-center gap-10 hidden">
+                        <li><a href="#" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Home</a></li>
+                        <li><a href="#about" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">About</a></li>
+                        <li><a href="#projects" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Projects</a></li>
+                        <li><a href="#education" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Education</a></li>
+                        <li><a href="#experience" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Experience</a></li>
+                        <li><a href="#certifications" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Certifications</a></li>
+                        <li><a href="#skills" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Skills</a></li>
+                        <li><a href="#contact" class="font-semibold text-lg text-white hover:text-primary transition ease-in duration-200">Contacts</a></li>
+                    </ul>
+
+                    <!-- Hamburger Icon -->
+                    <button class="block md:hidden group relative" id="hamburger">
+                        <div class="w-8 h-1 bg-gray-200 mb-2"></div>
+                        <div class="w-8 h-1 bg-gray-200 mb-2"></div>
+                        <div class="w-8 h-1 bg-gray-200"></div>
+                    </button>
+
+                    <!-- Mobile Menu -->
+                    <ul id="mobile-menu" class="absolute top-0 right-0 w-9/12 bg-neutral h-screen transform -translate-x-full opacity-0 transition-all duration-500 flex flex-col items-center pt-12">
+                        <button id="close-btn" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#" class="font-semibold text-lg text-white">Home</a>
+                        </li>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#about" class="font-semibold text-lg text-white">About</a>
+                        </li>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#projects" class="font-semibold  text-lg text-white">Projects</a>
+                        </li>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#education" class="font-semibold  text-lg text-white">Education</a>
+                        </li>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#certifications" class="font-semibold text-lg text-white">Certifications</a>
+                        </li>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#skills" class="font-semibold text-lg text-white">Skills</a>
+                        </li>
+                        <li class="py-8 hover:bg-primary transition ease-in duration-200 w-full">
+                            <a href="#contact" class="font-semibold text-lg text-white">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 
+   
 </body>
 </html>

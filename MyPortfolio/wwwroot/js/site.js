@@ -171,4 +171,41 @@ function closeCertificatePreview() {
   document.body.style.overflow = "auto"; 
 }
 
+// Cross Line
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.getElementById("cross-lines");
+  const vertical = section.querySelector(".line-vertical");
+  const horizontal = section.querySelector(".line-horizontal");
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        vertical.classList.remove("animate-grow-y");
+        horizontal.classList.remove("animate-grow-x");
+
+        void vertical.offsetWidth; 
+        void horizontal.offsetWidth;
+
+        vertical.classList.add("animate-grow-y");
+        horizontal.classList.add("animate-grow-x");
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(section);
+});
+
+
+// Preloader
+window.addEventListener("load", function () {
+            const preloader = document.getElementById("preloader");
+            const wrapper = document.getElementById("site-wrapper");
+
+
+            preloader.classList.add("fade-out");
+            setTimeout(() => {
+                wrapper.classList.add("show");
+                preloader.style.display = "none";
+            }, 500);
+        });

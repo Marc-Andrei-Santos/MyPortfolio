@@ -12,6 +12,104 @@ html, body {
     font-family: "Great Vibes", cursive;
 }
 
+@keyframes grow-x {
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleX(1);
+        opacity: 0.7;
+    }
+}
+
+@keyframes grow-y {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleY(1);
+        opacity: 0.7;
+    }
+}
+
+.animate-grow-x {
+    animation: grow-x 1.2s ease-out forwards;
+}
+
+.animate-grow-y {
+    animation: grow-y 1.2s ease-out forwards;
+}
+
+
+/* Preloader Container */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+    #preloader.fade-out {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+
+.ladder-loader {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    height: 60px;
+}
+
+    .ladder-loader span {
+        width: 14px;
+        height: 14px;
+        background: linear-gradient(135deg, #00f2fe, #4facfe);
+        border-radius: 50%;
+        display: inline-block;
+        animation: bounce-ladder 1.2s infinite;
+    }
+
+        .ladder-loader span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .ladder-loader span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .ladder-loader span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .ladder-loader span:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+@keyframes bounce-ladder {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-40px);
+        opacity: 1;
+    }
+}
+
 /* === Mobile Navbar === */
 #mobile-menu {
     display: flex;
