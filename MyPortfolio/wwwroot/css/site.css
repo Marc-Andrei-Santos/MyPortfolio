@@ -3,6 +3,45 @@ html, body {
     overflow-x: hidden;
 }
 
+/* Animations */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+.modal-show {
+    animation: zoomIn 0.3s ease forwards;
+}
+
+.modal-hide {
+    animation: zoomOut 0.3s ease forwards;
+}
+
+/* smoother hover scale */
+.hover\:scale-102:hover {
+    transform: scale(1.04);
+}
+
+
 /* === Typography === */
 .hero-text, .about-text, .portfolio-text, .service-text, .contact-text {
     font-family: "Poppins", sans-serif;
@@ -146,7 +185,7 @@ html, body {
         opacity: 1;
     }
 
-/* === Mobile Menu Close Button === */
+/* Mobile Menu Close Button === */
 #close-btn {
     cursor: pointer;
     color: white;
@@ -361,6 +400,7 @@ html, body {
         width: 80px;
         padding: 2px;
     }
+
 
 /* === Social Icons Fill === */
 #facebook svg {

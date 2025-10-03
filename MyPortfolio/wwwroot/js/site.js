@@ -102,36 +102,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// PROJECTS MODAL
-
-function openProjectModal(videoUrl) {
+function openProjectModal(title, description, techStackImages) {
     const modal = document.getElementById('projectModal');
-    const videoContainer = document.getElementById('projectVideoIframe');
-    const title = document.getElementById('projectModalTitle');
+    const modalContent = document.getElementById('projectModalContent');
 
-    videoContainer.innerHTML = `
-        <video controls class="w-full max-h-full rounded" style="object-fit: contain;">
-            <source src="${videoUrl}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    `;
+    document.getElementById('projectModalTitle').textContent = title;
+    document.getElementById('projectModalDesc').textContent = description;
 
-    if (videoUrl.includes('portfolio.mp4') || videoUrl.includes('portfoliodemo.mp4')) {
-        title.textContent = 'Personal Portfolio Demo';
-    } else if (videoUrl.includes('salestracker.mp4') || videoUrl.includes('food_sales.mp4')) {
-        title.textContent = 'Food Sales Tracking System Demo';
-    } else {
-        title.textContent = 'Project Preview';
-    }
+    const techStackEl = document.getElementById('projectTechStack');
+    techStackEl.innerHTML = techStackImages.map(img => `
+        <img src="${img}" alt="Tech Icon" class="w-12 h-12 object-contain">
+    `).join('');
 
     modal.classList.remove('hidden');
+    modalContent.classList.remove('modal-hide');
+    modalContent.classList.add('modal-show');
 }
 
 function closeProjectModal() {
     const modal = document.getElementById('projectModal');
-    const videoContainer = document.getElementById('projectVideoIframe');
-    videoContainer.innerHTML = '';
-    modal.classList.add('hidden');
+    const modalContent = document.getElementById('projectModalContent');
+
+    modalContent.classList.remove('modal-show');
+    modalContent.classList.add('modal-hide');
+
+    modalContent.addEventListener('animationend', () => {
+        if (modalContent.classList.contains('modal-hide')) {
+            modal.classList.add('hidden');
+        }
+    }, { once: true });
 }
 
 document.getElementById('projectModal').addEventListener('click', function (event) {
@@ -140,36 +139,50 @@ document.getElementById('projectModal').addEventListener('click', function (even
     }
 });
 
-function alignModalForMobile() {
-    const modal = document.querySelector('#projectModal > div');
-    if (window.innerWidth <= 640) {
-        modal.style.marginLeft = '0';
-        modal.style.marginRight = 'auto';
-    } else {
-        modal.style.marginLeft = 'auto';
-        modal.style.marginRight = 'auto';
-    }
-}
 
-window.addEventListener('load', alignModalForMobile);
-window.addEventListener('resize', alignModalForMobile);
-
-
-// CERTIFICATES MODAL
-
+// CERTIFICATES MODAL (NO SLIDESHOW)
 function openCertificatePreview(imageFileName) {
   const modal = document.getElementById("certificatePreviewModal");
+  const modalContent = document.getElementById("certificateModalContent");
   const image = document.getElementById("certificatePreviewImage");
 
-  modal.style.display = "flex";
   image.src = `/images/${imageFileName}`;
+
+  modal.classList.remove("hidden");
+  modalContent.classList.remove("modal-hide");
+  modalContent.classList.add("modal-show");
+
   document.body.style.overflow = "hidden";
 }
 
 function closeCertificatePreview() {
-  document.getElementById("certificatePreviewModal").style.display = "none";
-  document.body.style.overflow = "auto"; 
+  const modal = document.getElementById("certificatePreviewModal");
+  const modalContent = document.getElementById("certificateModalContent");
+
+  modalContent.classList.remove("modal-show");
+  modalContent.classList.add("modal-hide");
+
+  modalContent.addEventListener(
+    "animationend",
+    () => {
+      if (modalContent.classList.contains("modal-hide")) {
+        modal.classList.add("hidden");
+        document.body.style.overflow = "auto";
+      }
+    },
+    { once: true }
+  );
 }
+
+// Close modal when clicking outside content
+document.getElementById("certificatePreviewModal").addEventListener("click", function (event) {
+  if (event.target === this) {
+    closeCertificatePreview();
+  }
+});
+
+
+
 
 // Cross Line
 document.addEventListener("DOMContentLoaded", () => {
