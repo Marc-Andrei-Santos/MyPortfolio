@@ -19,7 +19,5 @@ namespace MyPortfolio.Controllers
 
             return PhysicalFile(filePath, fileType, fileName);
         }
-
-      
     }
 }

@@ -222,3 +222,31 @@ window.addEventListener("load", function () {
                 preloader.style.display = "none";
             }, 500);
         });
+
+
+// 404 JS
+
+(function() {
+  const allowed = [
+    '', '#home', '#about', '#projects', '#education',
+    '#experience', '#certifications', '#skills', '#contact'
+  ];
+
+  function isValidHash(hash) {
+
+    if (!hash || hash === '#') return true; 
+    if (hash.indexOf('/') !== -1) return false;
+    return allowed.includes(hash.toLowerCase());
+  }
+
+  function checkHashAndRedirect() {
+    const currentHash = location.hash || '';
+    if (!isValidHash(currentHash)) {
+      const errorUrl = window.__ERROR_404_URL || '/Error/404';
+      window.location.replace(errorUrl);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', checkHashAndRedirect);
+  window.addEventListener('hashchange', checkHashAndRedirect);
+})();
