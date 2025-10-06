@@ -1,4 +1,4 @@
-html, body {
+﻿html, body {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -417,14 +417,24 @@ html, body {
 
 /* === Hero Image Animation === */
 .heroImg-animate img {
-    width: 580px;
-    height: 580px;
+    width: 622px;
+    height: 622px;
     border-radius: 50%;
     object-fit: cover;
     transform: scale(0.97);
-    margin-left: 200px;
-    margin-top: -80px;
+    margin-left: 150px;
+    margin-top: -100px;
 }
+
+@media (max-width: 767px) {
+    .heroImg-animate img {
+        display: block;
+        margin: 100px auto 0 auto;
+        width: 400px; 
+        height: 400px; 
+    }
+}
+
 
 img,
 svg,

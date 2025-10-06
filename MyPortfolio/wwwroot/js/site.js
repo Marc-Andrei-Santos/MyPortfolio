@@ -3,7 +3,7 @@
 
 // Write your JavaScript code.
 
-// Menu bar in mobile
+// MENU BAR (MOBILE)
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 const closeBtn = document.getElementById('close-btn');
@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// RECENT PROJECTS MODAL
 function openProjectModal(title, description, techStackImages) {
     const modal = document.getElementById('projectModal');
     const modalContent = document.getElementById('projectModalContent');
@@ -140,7 +141,7 @@ document.getElementById('projectModal').addEventListener('click', function (even
 });
 
 
-// CERTIFICATES MODAL (NO SLIDESHOW)
+// CERTIFICATES MODAL 
 function openCertificatePreview(imageFileName) {
   const modal = document.getElementById("certificatePreviewModal");
   const modalContent = document.getElementById("certificateModalContent");
@@ -174,7 +175,6 @@ function closeCertificatePreview() {
   );
 }
 
-// Close modal when clicking outside content
 document.getElementById("certificatePreviewModal").addEventListener("click", function (event) {
   if (event.target === this) {
     closeCertificatePreview();
@@ -182,9 +182,7 @@ document.getElementById("certificatePreviewModal").addEventListener("click", fun
 });
 
 
-
-
-// Cross Line
+// CROSS LINE
 document.addEventListener("DOMContentLoaded", () => {
   const section = document.getElementById("cross-lines");
   const vertical = section.querySelector(".line-vertical");
@@ -210,7 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// Preloader
+// PRELOADER
 window.addEventListener("load", function () {
             const preloader = document.getElementById("preloader");
             const wrapper = document.getElementById("site-wrapper");
@@ -224,7 +222,7 @@ window.addEventListener("load", function () {
         });
 
 
-// 404 JS
+// 404 ERROR PAGE JS
 
 (function() {
   const allowed = [

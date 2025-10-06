@@ -4,27 +4,29 @@
 
 <!-- Home Section -->
 
- <section id="home" class="bg-neutral mt-14 md:mt-0">
+<section id="home" class="bg-neutral mt-14 md:mt-0">
+    <div class="max-w-screen-xl mx-auto md:py-52 py-32 px-4 flex flex-col md:flex-row items-center md:gap-12">
 
-     <div class="max-w-screen-xl mx-auto md:py-52 py-32 px-4 flex flex-col md:flex-row items-center md:gap-12">
-
-            <div class="md:w-1/2 text-center md:text-left md:mt-10 hero-animate">
-                
-                <h2 class="lg:text-6xl md:text-4xl text-3xl font-semibold py-3 hero-text text-white">I Build and Design Web Platforms with .NET Technologies</h2>
-                <p class="mb-8 text-gray-400 leading-relaxed">Welcome to my Portfolio! You can download my CV below.</p>
-            <a class="py-2 px-4 bg-primary dark:bg-primary dark:hover:bg-gray-700 dark:border-gray-700 text-white font-semibold rounded transition
-            ease-in duration-200" href="/Home/DownloadCV"> Download CV
+        <div class="md:w-1/2 text-center md:text-left md:mt-10 hero-animate">
+            <h2 class="lg:text-6xl md:text-4xl text-3xl font-semibold py-3 hero-text text-white">
+                I Build and Design Web Platforms with .NET Technologies
+            </h2>
+            <p class="mb-8 text-gray-400 leading-relaxed">
+                Welcome to my Portfolio! You can download my CV below.
+            </p>
+            <a class="py-2 px-4 bg-primary dark:bg-primary dark:hover:bg-gray-700 dark:border-gray-700 text-white font-semibold rounded transition ease-in duration-200"
+               href="/Home/DownloadCV">
+                Download CV
             </a>
-
-            </div>
-        <div class="heroImg-animate">
-            <img class="md:flex hidden -mb-40" src="~/images/code.jpg" alt="Me">
         </div>
 
+        <div class="heroImg-animate md:w-1/2">
+            <img class="block md:flex md:-mb-40 mx-auto md:mx-0" src="~/images/coding.jpg" alt="Me">
         </div>
-        <br />
-        <br />
-    </section>
+
+    </div>
+</section>
+
 
 <!-- About Section -->
 
@@ -182,7 +184,7 @@
                         <button class="py-2 px-4 bg-gray-700 hover:bg-gray-500 text-white font-semibold rounded transition ease-in duration-200"
                                 onclick="openProjectModal('Personal Portfolio',
                         'My personal portfolio is a full-featured website created with ASP.NET Core MVC, designed to showcase my technical skills, completed projects, and professional experiences. It highlights my journey as a developer while demonstrating responsive layouts, reusable components, and structured backend integration.',
-                        ['/images/csharp.png','/images/html.png','/images/css.png','/images/js.png'])">
+                        ['/images/html.jpg','/images/css.png','/images/js.png', '/images/tailwind.png', '/images/C.png', '/images/net.png', '/images/mvc.png'])">
                             Preview
                         </button>
                         <a href="https://github.com/Marc-Andrei-Santos/MyPortfolio"
@@ -207,7 +209,7 @@
                         <button class="py-2 px-4 bg-gray-700 hover:bg-gray-500 text-white font-semibold rounded transition ease-in duration-200"
                                 onclick="openProjectModal('Sales Tracking System',
                         'This freelance project was developed for a client’s food business. The system tracks daily sales transactions, manages product inventory, and generates reports to improve business decisions. Built using ASP.NET Core MVC, it leverages SQL Server for data storage and Bootstrap for styling.',
-                        ['/images/csharp.png','/images/sql.png','/images/bootstrap.png'])">
+                        ['/images/html.jpg','/images/css.png','/images/js.png', '/images/C.png', '/images/net.png', '/images/mvc.png' , '/images/sql.png', '/images/ef.png', '/images/chart.jpg', '/images/pdf.png', '/images/identity.jpg'])">
                             Preview
                         </button>
                         <a href="https://github.com/Marc-Andrei-Santos/FoodSalesTrackingSystem"
@@ -232,7 +234,7 @@
                         <button class="py-2 px-4 bg-gray-700 hover:bg-gray-500 text-white font-semibold rounded transition ease-in duration-200"
                                 onclick="openProjectModal('Patient Management System',
                         'A structured healthcare solution designed to manage patient records, doctor schedules, and appointment history. Built using ASP.NET MVC with an N-Layer Architecture, it ensures separation of concerns and maintainability. Stored procedures are used to optimize database queries, ensuring scalability for larger hospital setups.',
-                        ['/images/csharp.png','/images/sql.png','/images/mvc.png'])">
+                        ['/images/html.jpg','/images/css.png','/images/js.png', '/images/jquery.png', '/images/C.png','/images/asp.png','/images/mvc.png','/images/sql.png', '/images/sp.png'])">
                             Preview
                         </button>
                         <a href="https://github.com/Marc-Andrei-Santos/MarcPatientManagement"
@@ -257,7 +259,7 @@
                         <button class="py-2 px-4 bg-gray-700 hover:bg-gray-500 text-white font-semibold rounded transition ease-in duration-200"
                                 onclick="openProjectModal('Library Management System',
                         'A complete library system for managing book borrowing, returns, catalog management, and eBook downloads. Built with ASP.NET Core MVC, it allows librarians to maintain accurate records of available books while providing a seamless borrowing experience for students and staff. SQL Server ensures reliable data storage, while Bootstrap and custom styling provide a professional and user-friendly interface.',
-                        ['/images/csharp.png','/images/sql.png','/images/html.png','/images/css.png'])">
+                        ['/images/html.jpg','/images/css.png','/images/js.png', '/images/C.png', '/images/net.png', '/images/mvc.png' , '/images/sql.png','/images/ef.png', '/images/pdf.png', '/images/identity.jpg'])">
                             Preview
                         </button>
                         <a href="https://github.com/Marc-Andrei-Santos/LibraryAppMVC"
@@ -293,10 +295,13 @@
             <!-- Tech Stack Section -->
             <div class="mb-4">
                 <h4 class="text-white text-lg font-semibold mb-2 text-center">Tech Stack Used</h4>
+                <br />
                 <div id="projectTechStack" class="flex flex-wrap justify-center gap-4"></div>
             </div>
         </div>
     </div>
+</div>
+</div>
 </section>
 
 
@@ -306,10 +311,11 @@
 <section id="education" class="bg-gray-900">
     <div class="max-w-screen-xl mx-auto py-12 px-4">
         <div class="text-center mb-10">
-            <h2 class="md:text-3xl text-2xl font-bold text-white mb-2 STitle-animate">Education</h2>
-            <p class="text-gray-300 text-sm leading-relaxed SDesc-animate">
+            <h2 class="md:text-4xl text-3xl font-bold text-white portfolio-text mb-3 STitle-animate">Education</h2>
+            <p class="text-gray-300 leading-relaxed SDesc-animate">
                 My academic background and training that helped me build a strong foundation in programming.
             </p>
+
         </div>
 
         <div class="flex flex-col space-y-12">
@@ -364,6 +370,7 @@
 
     
 <!-- Experience Section -->
+
 <section id="experience" class="bg-gradient-to-br from-primary to-black">
     <div class="max-w-screen-xl mx-auto py-16 px-4">
         <div class="text-center mb-12">
@@ -410,7 +417,7 @@
                 <div class="w-1/2 pl-8 text-left">
                     <div class="bg-gray-800 rounded-2xl shadow-lg hover:scale-[1.03] transition-transform">
                         <div class="flex flex-col items-center text-center rounded-2xl py-10 px-6 gap-3">
-                            <img src="~/images/me.png" alt=".Net Developer"
+                            <img src="~/images/coding.jpg" alt=".Net Developer"
                                  class="w-28 h-28 rounded-full object-cover border-4 border-primary shadow-md" />
                             <h3 class="text-xl font-semibold text-white">Freelance .Net Developer</h3>
                             <div>
@@ -462,6 +469,7 @@
 
 
 <!-- Certifications Section -->
+
 <section id="certifications" class="bg-neutral">
     <div class="max-w-screen-xl mx-auto py-16 px-4">
         <div class="text-center md:w-1/2 m-auto mb-10">
@@ -525,12 +533,9 @@
         <div id="certificateModalContent"
              class="relative flex flex-col items-center w-full p-8 bg-gray-800 rounded-lg shadow-xl transform transition-all duration-300 ease-out scale-95 opacity-0 overflow-hidden"
              style="max-width:1000px; max-height:90vh; z-index:1000;">
-            <!-- mas malapad -->
-            <!-- Certificate Image -->
             <div class="flex items-center justify-center w-full h-[500px]">
                 <img id="certificatePreviewImage"
                      class="max-h-full max-w-[800px] object-contain rounded-lg transition-transform duration-500" />
-                <!-- controlled width ng image -->
             </div>
 
             <!-- Close Button -->
