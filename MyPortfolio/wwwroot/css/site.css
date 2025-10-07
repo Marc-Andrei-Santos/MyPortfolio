@@ -3,6 +3,12 @@
     overflow-x: hidden;
 }
 
+#projectTechStack div span {
+    bottom: -1.5rem;
+    position: absolute;
+    white-space: nowrap;
+}
+
 /* Animations */
 @keyframes zoomIn {
     0% {

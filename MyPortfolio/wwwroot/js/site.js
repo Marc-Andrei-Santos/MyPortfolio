@@ -102,8 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// RECENT PROJECTS MODAL
-function openProjectModal(title, description, techStackImages) {
+function openProjectModal(title, description, techStackItems) {
     const modal = document.getElementById('projectModal');
     const modalContent = document.getElementById('projectModalContent');
 
@@ -111,8 +110,11 @@ function openProjectModal(title, description, techStackImages) {
     document.getElementById('projectModalDesc').textContent = description;
 
     const techStackEl = document.getElementById('projectTechStack');
-    techStackEl.innerHTML = techStackImages.map(img => `
-        <img src="${img}" alt="Tech Icon" class="w-12 h-12 object-contain">
+    techStackEl.innerHTML = techStackItems.map(item => `
+        <div class="relative group flex flex-col items-center">
+            <img src="${item.src}" alt="${item.label}" class="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110">
+            <span class="absolute opacity-0 group-hover:opacity-100 text-gray-300 text-sm mt-14 transition-opacity duration-300">${item.label}</span>
+        </div>
     `).join('');
 
     modal.classList.remove('hidden');
@@ -135,9 +137,7 @@ function closeProjectModal() {
 }
 
 document.getElementById('projectModal').addEventListener('click', function (event) {
-    if (event.target === this) {
-        closeProjectModal();
-    }
+    if (event.target === this) closeProjectModal();
 });
 
 

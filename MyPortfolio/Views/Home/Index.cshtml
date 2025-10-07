@@ -319,12 +319,13 @@
 
         
 <!-- Recent Projects -->
-
 <section id="projects" class="bg-gray-900 relative">
     <div class="max-w-screen-xl mx-auto py-16 px-4 relative">
 
         <div class="text-center md:w-1/1 m-auto mb-10">
-            <h2 class="md:text-4xl text-3xl font-bold text-white portfolio-text mb-3 PTitle-animate">Recent Projects</h2>
+            <h2 class="md:text-4xl text-3xl font-bold text-white portfolio-text mb-3 PTitle-animate">
+                Recent Projects
+            </h2>
             <p class="text-gray-300 leading-relaxed PDesc-animate">
                 I have developed web applications using ASP.NET Core MVC, building user-friendly platforms focused on real-world functionalities.
             </p>
@@ -349,9 +350,19 @@
                     <br />
                     <div class="flex justify-center space-x-4">
                         <button class="py-2 px-4 bg-gray-700 hover:bg-gray-500 text-white font-semibold rounded transition ease-in duration-200"
-                                onclick="openProjectModal('Personal Portfolio',
-                        'My personal portfolio is a full-featured website created with ASP.NET Core MVC, designed to showcase my technical skills, completed projects, and professional experiences. It highlights my journey as a developer while demonstrating responsive layouts, reusable components, and structured backend integration.',
-                        ['/images/html.jpg','/images/css.png','/images/js.png', '/images/tailwind.png', '/images/C.png', '/images/net.png', '/images/mvc.png'])">
+                                onclick="openProjectModal(
+                                'Personal Portfolio',
+                                'My personal portfolio is a full-featured website created with ASP.NET Core MVC, designed to showcase my technical skills, completed projects, and professional experiences.',
+                                [
+                                    { src: '/images/html.jpg', label: 'HTML' },
+                                    { src: '/images/css.png', label: 'CSS' },
+                                    { src: '/images/js.png', label: 'JavaScript' },
+                                    { src: '/images/tailwind.png', label: 'Tailwind' },
+                                    { src: '/images/C.png', label: 'C#' },
+                                    { src: '/images/net.png', label: '.NET Core' },
+                                    { src: '/images/mvc.png', label: 'MVC' }
+                                ]
+                            )">
                             Preview
                         </button>
                         <a href="https://github.com/Marc-Andrei-Santos/MyPortfolio"
@@ -374,9 +385,23 @@
                     <br />
                     <div class="flex justify-center space-x-4">
                         <button class="py-2 px-4 bg-gray-700 hover:bg-gray-500 text-white font-semibold rounded transition ease-in duration-200"
-                                onclick="openProjectModal('Sales Tracking System',
-                        'This freelance project was developed for a client’s food business. The system tracks daily sales transactions, manages product inventory, and generates reports to improve business decisions. Built using ASP.NET Core MVC, it leverages SQL Server for data storage and Bootstrap for styling.',
-                        ['/images/html.jpg','/images/css.png','/images/js.png', '/images/C.png', '/images/net.png', '/images/mvc.png' , '/images/sql.png', '/images/ef.png', '/images/chart.jpg', '/images/pdf.png', '/images/identity.jpg'])">
+                                onclick="openProjectModal(
+                                'Sales Tracking System',
+                                'This freelance project was developed for a client’s food business. It tracks sales, manages inventory, and generates reports.',
+                                [
+                                    { src: '/images/html.jpg', label: 'HTML' },
+                                    { src: '/images/css.png', label: 'CSS' },
+                                    { src: '/images/js.png', label: 'JavaScript' },
+                                    { src: '/images/C.png', label: 'C#' },
+                                    { src: '/images/net.png', label: '.NET Core' },
+                                    { src: '/images/mvc.png', label: 'MVC' },
+                                    { src: '/images/sql.png', label: 'SQL Server' },
+                                    { src: '/images/ef.png', label: 'Entity Framework' },
+                                    { src: '/images/chart.jpg', label: 'Chart.js' },
+                                    { src: '/images/pdf.png', label: 'PDF JS' },
+                                    { src: '/images/identity.jpg', label: 'ASP.NET Identity' }
+                                ]
+                            )">
                             Preview
                         </button>
                         <a href="https://github.com/Marc-Andrei-Santos/FoodSalesTrackingSystem"
@@ -399,9 +424,21 @@
                     <br />
                     <div class="flex justify-center space-x-4">
                         <button class="py-2 px-4 bg-gray-700 hover:bg-gray-500 text-white font-semibold rounded transition ease-in duration-200"
-                                onclick="openProjectModal('Patient Management System',
-                        'A structured healthcare solution designed to manage patient records, doctor schedules, and appointment history. Built using ASP.NET MVC with an N-Layer Architecture, it ensures separation of concerns and maintainability. Stored procedures are used to optimize database queries, ensuring scalability for larger hospital setups.',
-                        ['/images/html.jpg','/images/css.png','/images/js.png', '/images/jquery.png', '/images/C.png','/images/asp.png','/images/mvc.png','/images/sql.png', '/images/sp.png'])">
+                                onclick="openProjectModal(
+                                'Patient Management System',
+                                'A structured healthcare solution to manage patient records, doctor schedules, and appointments.',
+                                [
+                                    { src: '/images/html.jpg', label: 'HTML' },
+                                    { src: '/images/css.png', label: 'CSS' },
+                                    { src: '/images/js.png', label: 'JavaScript' },
+                                    { src: '/images/jquery.png', label: 'jQuery' },
+                                    { src: '/images/C.png', label: 'C#' },
+                                    { src: '/images/asp.png', label: 'ASP.NET' },
+                                    { src: '/images/mvc.png', label: 'MVC' },
+                                    { src: '/images/sql.png', label: 'SQL Server' },
+                                    { src: '/images/sp.png', label: 'Stored Procedures' }
+                                ]
+                            )">
                             Preview
                         </button>
                         <a href="https://github.com/Marc-Andrei-Santos/MarcPatientManagement"
@@ -416,7 +453,7 @@
             <!-- Project 4 -->
             <div class="project-card bg-gray-800 rounded shadow-md overflow-hidden relative z-10 transform transition duration-300 hover:scale-102">
                 <div class="w-full h-80">
-                    <img src="~/images/library.JPG" alt="Library System" class="w-full h-full object-cover">
+                    <img src="~/images/library.JPG" alt="Library Management System" class="w-full h-full object-cover">
                 </div>
                 <div class="p-3 text-center">
                     <h3 class="text-xl font-bold text-white mb-3">Library Management System</h3>
@@ -424,9 +461,22 @@
                     <br />
                     <div class="flex justify-center space-x-4">
                         <button class="py-2 px-4 bg-gray-700 hover:bg-gray-500 text-white font-semibold rounded transition ease-in duration-200"
-                                onclick="openProjectModal('Library Management System',
-                        'A complete library system for managing book borrowing, returns, catalog management, and eBook downloads. Built with ASP.NET Core MVC, it allows librarians to maintain accurate records of available books while providing a seamless borrowing experience for students and staff. SQL Server ensures reliable data storage, while Bootstrap and custom styling provide a professional and user-friendly interface.',
-                        ['/images/html.jpg','/images/css.png','/images/js.png', '/images/C.png', '/images/net.png', '/images/mvc.png' , '/images/sql.png','/images/ef.png', '/images/pdf.png', '/images/identity.jpg'])">
+                                onclick="openProjectModal(
+                                'Library Management System',
+                                'A complete library system for managing book borrowing, returns, and eBook downloads.',
+                                [
+                                    { src: '/images/html.jpg', label: 'HTML' },
+                                    { src: '/images/css.png', label: 'CSS' },
+                                    { src: '/images/js.png', label: 'JavaScript' },
+                                    { src: '/images/C.png', label: 'C#' },
+                                    { src: '/images/net.png', label: '.NET Core' },
+                                    { src: '/images/mvc.png', label: 'MVC' },
+                                    { src: '/images/sql.png', label: 'SQL Server' },
+                                    { src: '/images/ef.png', label: 'Entity Framework' },
+                                    { src: '/images/pdf.png', label: 'PDF JS' },
+                                    { src: '/images/identity.jpg', label: 'ASP.NET Identity' }
+                                ]
+                            )">
                             Preview
                         </button>
                         <a href="https://github.com/Marc-Andrei-Santos/LibraryAppMVC"
@@ -437,40 +487,33 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-    <!-- Project Modal -->
-    <div id="projectModal"
-         class="fixed inset-0 z-50 p-4 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden transition-opacity duration-300 ease-out">
+        <!-- Project Modal -->
+        <div id="projectModal"
+             class="fixed inset-0 z-50 p-4 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden transition-opacity duration-300 ease-out">
+            <div id="projectModalContent"
+                 class="relative flex flex-col w-full p-6 bg-gray-800 rounded-lg shadow-xl transform transition-all duration-300 ease-out scale-95 opacity-0"
+                 style="max-width:900px; max-height:95vh; overflow-y:auto; z-index:1000;">
 
-        <div id="projectModalContent"
-             class="relative flex flex-col w-full p-6 bg-gray-800 rounded-lg shadow-xl transform transition-all duration-300 ease-out scale-95 opacity-0"
-             style="max-width:900px; max-height:95vh; overflow-y:auto; z-index:1000;">
+                <button aria-label="Close Modal" onclick="closeProjectModal()"
+                        class="absolute top-2 right-2 z-10 text-3xl font-bold text-white hover:text-gray-400">
+                    ×
+                </button>
 
-            <button aria-label="Close Modal" onclick="closeProjectModal()"
-                    class="absolute top-2 right-2 z-10 text-3xl font-bold text-white hover:text-gray-400">
-                ×
-            </button>
+                <h3 id="projectModalTitle" class="mb-4 text-2xl font-bold text-center text-white">Project Details</h3>
+                <p id="projectModalDesc" class="text-gray-300 mb-6 text-center leading-relaxed"></p>
 
-            <h3 id="projectModalTitle"
-                class="mb-4 text-2xl font-bold text-center text-white">
-                Project Details
-            </h3>
-
-            <!-- Project Description -->
-            <p id="projectModalDesc" class="text-gray-300 mb-6 text-center leading-relaxed"></p>
-
-            <!-- Tech Stack Section -->
-            <div class="mb-4">
-                <h4 class="text-white text-lg font-semibold mb-2 text-center">Tech Stack Used</h4>
-                <br />
-                <div id="projectTechStack" class="flex flex-wrap justify-center gap-4"></div>
+                <!-- Tech Stack Section -->
+                <div class="mb-4">
+                    <h4 class="text-white text-lg font-semibold mb-2 text-center">Tech Stack Used</h4>
+                    <br />
+                    <div id="projectTechStack" class="flex flex-wrap justify-center gap-6"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 </section>
-
 
 
 <!-- Education -->
