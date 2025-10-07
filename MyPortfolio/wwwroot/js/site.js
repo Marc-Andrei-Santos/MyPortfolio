@@ -51,37 +51,12 @@ const mobileScrollOptions = {
 
 function initializeScrollReveal() {
     const options = isMobile() ? mobileScrollOptions : scrollOptions;
-    const reveals = [
-        ['.hero-animate', { origin: 'left' }],
-        ['.heroImg-animate', { origin: 'right' }],
-        ['.about-animate', { origin: 'right' }],
-        ['.aboutImg-animate', { origin: 'left' }],
-        ['.icon img', { origin: 'bottom', interval: 150 }],
-        ['.PTitle-animate', { origin: 'left' }],
-        ['.PDesc-animate', { origin: 'right' }],
-        ['.TTitle-animate', { origin: 'left' }],
-        ['.TDesc-animate', { origin: 'right' }],
-        ['.ADesc-animate', { origin: 'bottom' }],
-        ['.certi-1animate', { origin: 'left', distance: '100px' }],
-        ['.certi-2animate', { origin: 'top', distance: '130px' }],
-        ['.certi-3animate', { origin: 'right', distance: '100px' }],
-        ['.certi-4animate', { origin: 'bottom', distance: '100px' }],
-        ['.certi-5animate', { origin: 'bottom', distance: '100px' }],
-        ['.contact-head', { origin: 'left', distance: '100px' }],
-        ['.contact-desc', { origin: 'right', distance: '100px' }],
-        ['.gif-animate', { origin: 'left', distance: '100px' }],
-        ['.contact-animate', { origin: 'right', distance: '100px' }],
-        ['.STitle-animate', { origin: 'left' }],
-        ['.SDesc-animate', { origin: 'right' }],
-        ['.CTitle-animate', { origin: 'left' }],
-        ['.CDesc-animate', { origin: 'right' }],
-        ['.form-animate', { origin: 'right' }],
-        ['.footer-animate a', { origin: 'left', interval: 50 }],
-        ['.experience-header-animate', { origin: 'bottom' }],
-        ['.experience-animate', { origin: 'top' }]
-    ];
 
-    reveals.forEach(([selector, opts]) => ScrollReveal(options).reveal(selector, opts));
+    const sr = ScrollReveal(options);
+
+    sr.reveal('.reveal-left', { origin: 'left', distance: '110px' });
+    sr.reveal('.reveal-right', { origin: 'right', distance: '110px' });
+    sr.reveal('.reveal-down', { origin: 'bottom', distance: '110px' });
 }
 
 function setupExperienceObserver() {
@@ -102,6 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+// Projects Modal
 function openProjectModal(title, description, techStackItems) {
     const modal = document.getElementById('projectModal');
     const modalContent = document.getElementById('projectModalContent');

@@ -3,6 +3,10 @@
     overflow-x: hidden;
 }
 
+.tech-stack-grid, .project-gallery {
+    overflow: hidden;
+}
+
 /* === Typography === */
 .hero-text, .about-text, .portfolio-text, .service-text, .contact-text {
     font-family: "Poppins", sans-serif;
