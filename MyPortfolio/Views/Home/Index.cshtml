@@ -23,7 +23,6 @@
         <div class="heroImg-animate md:w-1/2">
             <img class="block md:flex md:-mb-40 mx-auto md:mx-0" src="~/images/coding.jpg" alt="Me">
         </div>
-
     </div>
 </section>
 
@@ -78,81 +77,249 @@
 </section>
 
 
+<!-- What I Bring to the Table -->
+<div class="bg-neutral min-h-screen flex items-start justify-center pt-16">
+    <div class="max-w-6xl w-full mx-auto py-12 px-6 text-white">
 
-<!-- Tools Section -->
-<div class="bg-neutral">
-    <div class="max-w-screen-2xl mx-auto py-7 px-7">
-        <div class="flex md:flex-row flex-wrap items-center justify-center md:gap-14 gap-10 icon">
-            <!-- HTML  -->
-            <div class="relative group">
-                <img class="md:w-14 w-12 transform transition-transform duration-300 group-hover:scale-110"
-                     src="~/images/html.jpg" alt="HTML">
-                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full bg-black text-white text-sm px-2 py-1 rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    HTML5
-                </span>
-            </div>
-            <!-- CSS -->
-            <div class="relative group">
-                <img class="md:w-14 w-12 transform transition-transform duration-300 group-hover:scale-110"
-                     src="~/images/css.png" alt="CSS">
-                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full bg-black text-white text-sm px-2 py-1 rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    CSS3
-                </span>
-            </div>
-            <!-- JavaScript -->
-            <div class="relative group">
-                <img class="md:w-14 w-12 transform transition-transform duration-300 group-hover:scale-110"
-                     src="~/images/js.png" alt="JavaScript">
-                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full bg-black text-white text-sm px-2 py-1 rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    JavaScript
-                </span>
-            </div>
-            <!-- Tailwind -->
-            <div class="relative group">
-                <img class="md:w-14 w-12 transform transition-transform duration-300 group-hover:scale-110"
-                     src="~/images/tailwind.png" alt="Tailwind">
-                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full bg-black text-white text-sm px-2 py-1 rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    Tailwind
-                </span>
-            </div>
-            <!-- C# -->
-            <div class="relative group">
-                <img class="md:w-14 w-12 transform transition-transform duration-300 group-hover:scale-110"
-                     src="~/images/C.png" alt="C#">
-                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full bg-black text-white text-sm px-2 py-1 rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    C#
-                </span>
-            </div>
-            <!-- ASP.NET -->
-            <div class="relative group">
-                <img class="md:w-14 w-12 transform transition-transform duration-300 group-hover:scale-110"
-                     src="~/images/net.png" alt="ASP.NET">
-                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full bg-black text-white text-sm px-3 py-1 rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    ASP.NET
-                </span>
-            </div>
-            <!-- JQuery -->
-            <div class="relative group">
-                <img class="md:w-16 w-14 rounded-full transform transition-transform duration-300 group-hover:scale-110"
-                     src="~/images/jquery.png" alt="jquery">
-                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full bg-black text-white text-sm px-3 py-1 rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    JQuery
-                </span>
-            </div>
-            <!-- GitHub -->
-            <div class="relative group">
-                <img class="md:w-14 w-12 transform transition-transform duration-300 group-hover:scale-110"
-                     src="~/images/github.png" alt="GitHub">
-                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full bg-black text-white text-sm px-2 py-1 rounded opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    GitHub
-                </span>
+        <!-- Title and Description -->
+        <div class="text-center mb-14 -mt-10">
+            <h2 class="md:text-4xl text-3xl font-bold text-white mb-3 PTitle-animate">
+                What I Bring to the Table
+            </h2>
+            <p class="text-gray-300 leading-relaxed PDesc-animate max-w-2xl mx-auto">
+                I specialize in full-stack web development using modern frameworks and tools.
+            </p>
+        </div>
+
+        <!-- FRONTEND -->
+        <div class="flex flex-col md:flex-row items-center justify-between mb-10 border-b-2 border-gray-600 pb-10">
+            <h3 class="text-2xl font-semibold text-sky-200 md:w-1/5 w-full text-center md:text-left mb-6 md:mb-0">
+                Frontend
+            </h3>
+            <div class="flex flex-nowrap justify-center gap-4 md:w-4/5 overflow-x-auto">
+                <!-- HTML -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/html.jpg" alt="HTML" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">HTML</span>
+                </div>
+                <!-- CSS -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/css.png" alt="CSS" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">CSS</span>
+                </div>
+                <!-- JavaScript -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/js.png" alt="JavaScript" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">JavaScript</span>
+                </div>
+                <!-- Bootstrap -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/bootstrap.png" alt="Bootstrap" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">Bootstrap</span>
+                </div>
+                <!-- Tailwind CSS -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/tailwind.png" alt="Tailwind" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">Tailwind</span>
+                </div>
+                <!-- Vue.js -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/vue.png" alt="Vue.js" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">Vue.js</span>
+                </div>
+                <!-- jQuery -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/jquery.png" alt="jQuery" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">jQuery</span>
+                </div>
             </div>
         </div>
+
+        <!-- BACKEND -->
+        <div class="flex flex-col md:flex-row items-center justify-between mb-10 border-b-2 border-gray-600 pb-10">
+            <h3 class="text-2xl font-semibold text-sky-200 md:w-1/5 w-full text-center md:text-left mb-6 md:mb-0">
+                Backend
+            </h3>
+            <div class="flex flex-nowrap justify-center gap-4 md:w-4/5 overflow-x-auto">
+                <!-- C# -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/C.png" alt="C#" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">C#</span>
+                </div>
+                <!-- Java -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/java.png" alt="Java" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">Java</span>
+                </div>
+                <!-- PHP -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <img src="~/images/php.png" alt="PHP" class="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110">
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">PHP</span>
+                </div>
+                <!-- CodeIgniter 4 -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <img src="~/images/ci4.png" alt="CodeIgniter 4" class="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110">
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">CodeIgniter 4</span>
+                </div>
+                <!-- ASP.NET -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/asp.png" alt="ASP.NET" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">ASP.NET</span>
+                </div>
+                <!-- ASP.NET Core -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/net.png" alt="ASP.NET Core" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">ASP.NET Core</span>
+                </div>
+                <!-- WEB API -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/api.png" alt="REST API" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">Web API</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- DATABASE -->
+        <div class="flex flex-col md:flex-row items-center justify-between mb-10 border-b-2 border-gray-600 pb-10">
+            <h3 class="text-2xl font-semibold text-sky-200 md:w-1/5 w-full text-center md:text-left mb-6 md:mb-0">
+                Database
+            </h3>
+            <div class="flex flex-nowrap justify-center gap-4 md:w-4/5 overflow-x-auto">
+                <!-- Entity Framework -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/ef.png" alt="Entity Framework" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">Entity Framework</span>
+                </div>
+                <!-- MySQL -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/sql.png" alt="MySQL" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">Microsoft SQL Server</span>
+                </div>
+                <!-- Stored Procedures -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-22">
+                    <div class="w-14 h-14 flex items-center justify-center">
+                        <img src="~/images/sp.png" alt="Stored Procedures"
+                             class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-2 text-center transition-opacity duration-300 ease-out">
+                        Stored Procedures
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="flex flex-col md:flex-row items-center justify-between mb-10 border-b-2 border-gray-600 pb-10">
+            <h3 class="text-2xl font-semibold text-sky-200 md:w-1/5 w-full text-center md:text-left mb-6 md:mb-0">
+                Tools
+            </h3>
+            <div class="flex flex-nowrap justify-center gap-4 md:w-4/5 overflow-x-auto">
+                <!-- Visual Studio -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/vs.png" alt="Visual Studio" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">Visual Studio</span>
+                </div>
+                <!-- VS Code -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/vscode.png" alt="VS Code" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">Visual Studio Code</span>
+                </div>
+                <!-- SSMS -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/ssms.png" alt="SSMS" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">SSMS</span>
+                </div>
+                <!-- Docker -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/docker.png" alt="Docker" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">Docker</span>
+                </div>
+                <!-- Jenkins -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-22">
+                    <div class="w-14 h-14 flex items-center justify-center">
+                        <img src="~/images/jenkins.png" alt="Jenkins"
+                             class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-2 text-center transition-opacity duration-300 ease-out">
+                        Jenkins
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- VERSION CONTROL -->
+        <div class="flex flex-col md:flex-row items-center justify-between mb-10">
+            <h3 class="text-2xl font-semibold text-sky-200 md:w-1/5 w-full text-center md:text-left mb-6 md:mb-0">
+                Version Control
+            </h3>
+            <div class="flex flex-nowrap justify-center gap-4 md:w-4/5 overflow-x-auto">
+                <!-- Git -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/git.png" alt="Git" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">Git</span>
+                </div>
+                <!-- GitHub -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/github.png" alt="GitHub" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">GitHub</span>
+                </div>
+                <!-- GitLab -->
+                <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20">
+                    <div class="w-12 h-12 flex items-center justify-center">
+                        <img src="~/images/gitlab.png" alt="GitLab" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
+                    </div>
+                    <span class="text-white text-sm opacity-0 group-hover:opacity-100 mt-1 text-center transition-opacity duration-300 ease-out">GitLab</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
+
         
 <!-- Recent Projects -->
+
 <section id="projects" class="bg-gray-900 relative">
     <div class="max-w-screen-xl mx-auto py-16 px-4 relative">
 
@@ -306,7 +473,7 @@
 
 
 
-<!-- Education Section -->
+<!-- Education -->
 
 <section id="education" class="bg-gray-900">
     <div class="max-w-screen-xl mx-auto py-12 px-4">
@@ -369,7 +536,7 @@
 </section>
 
     
-<!-- Experience Section -->
+<!-- Experience -->
 
 <section id="experience" class="bg-gradient-to-br from-primary to-black">
     <div class="max-w-screen-xl mx-auto py-16 px-4">
@@ -426,8 +593,7 @@
                             </div>
                             <div class="text-gray-400 text-sm">May 2025 – Present</div>
                             <p class="text-gray-200 text-sm leading-relaxed text-center">
-                                Developed web applications as a freelance web developer, working with HTML, CSS, and JavaScript to build
-                                interactive web interfaces, and Entity Framework for database management.
+                                Developed web applications as a freelance web developer.
                                 Collaborated with small businesses to create tailored solutions that improved efficiency and customer engagement.
                                 Enhanced problem-solving skills by managing projects independently and ensuring client satisfaction.
                             </p>
@@ -455,7 +621,6 @@
                             <p class="text-gray-200 text-sm leading-relaxed text-center">
                                 Assisted in troubleshooting both hardware and software issues, helped configure user systems to ensure
                                 stable performance and maintain productivity for daily business operations.
-                                Participated in team meetings to learn IT infrastructure best practices and workplace collaboration.
                                 Strengthened knowledge in system administration and user support through hands-on experience.
                             </p>
                         </div>
@@ -468,7 +633,7 @@
 </section>
 
 
-<!-- Certifications Section -->
+<!-- Certifications  -->
 
 <section id="certifications" class="bg-neutral">
     <div class="max-w-screen-xl mx-auto py-16 px-4">
