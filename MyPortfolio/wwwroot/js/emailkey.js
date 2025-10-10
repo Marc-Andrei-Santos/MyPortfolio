@@ -1,42 +1,38 @@
-﻿async function initEmailJS() {
+﻿document.addEventListener('DOMContentLoaded', async () => {
     try {
         const res = await fetch('/api/emailjs/config');
         const config = await res.json();
 
-        emailjs.init({
-            publicKey: config.publicKey
-        });
+        emailjs.init({ publicKey: config.publicKey });
 
         const form = document.getElementById('contact-form');
+        if (!form) return;
+
         form.addEventListener('submit', function (event) {
-            event.preventDefault();
+            event.preventDefault(); // prevent page reload
 
             emailjs.sendForm(config.serviceID, config.templateID, form)
-                .then(function (response) {
+                .then(response => {
                     Toastify({
                         text: "Message sent successfully!",
                         duration: 3000,
-                        gravity: "top", 
-                        position: "center", 
-                        style: {
-                            background: "#4BB543"
-                        },
-                        stopOnFocus: true
+                        gravity: "top",
+                        position: "center",
+                        style: { background: "#4BB543" }
                     }).showToast();
 
                     form.reset();
-                }, function (error) {
+                })
+                .catch(error => {
                     Toastify({
                         text: "Failed to send message. Please try again.",
                         duration: 3000,
                         gravity: "top",
                         position: "center",
-                        style: {
-                            background: "#FF4C4C"
-                        }, stopOnFocus: true
+                        style: { background: "#FF4C4C" }
                     }).showToast();
 
-                    console.log('FAILED...', error);
+                    console.error('FAILED...', error);
                 });
         });
 
@@ -47,12 +43,7 @@
             duration: 3000,
             gravity: "top",
             position: "center",
-            style: {
-                background: "#FF4C4C"
-            },
-            stopOnFocus: true
+            style: { background: "#FF4C4C" }
         }).showToast();
     }
-}
-
-initEmailJS();
+});

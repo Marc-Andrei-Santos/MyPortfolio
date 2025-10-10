@@ -103,6 +103,43 @@
         </main>
     </div>
 
+    <div id="chatbot-container">
+        <!-- Floating chat toggle button -->
+        <button id="chat-toggle" class="chat-toggle"> 💬 </button>
+
+        <!-- Chat window -->
+        <div id="chat-window" class="chat-window hidden">
+            <div class="chat-header">
+                <div class="chat-header-left">
+                    <img src="~/images/coding.jpg" class="chat-pfp" alt="Marc">
+                    <div>
+                        <div class="chat-title">Marc Andrei Santos</div>
+                        <div class="chat-subtitle">Portfolio Assistant</div>
+                    </div>
+                </div>
+                <button id="close-chat" class="close-chat">&times;</button>
+            </div>
+
+            <div id="chatBox" class="chat-body">
+                <!-- Chat messages appear here -->
+            </div>
+
+            <!-- Typing indicator -->
+            <div id="typingIndicator" class="typing-indicator" style="display:none;">
+                Marc is typing...
+            </div>
+
+            <form id="chatForm" class="chat-form">
+                <input type="text" id="userMessage" placeholder="Type a message..." autocomplete="off" />
+                <button type="submit" id="sendButton">
+                    <span class="send-text">Send</span>
+                    <div class="circle-loader" style="display:none;"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
     <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
