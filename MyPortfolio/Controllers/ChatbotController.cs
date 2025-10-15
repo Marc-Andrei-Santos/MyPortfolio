@@ -40,7 +40,7 @@ namespace MyPortfolio.Controllers
                     return StatusCode(502, new { error = "AI returned empty response." });
 
                 return Json(new { answer = response });
-            }
+            } 
             catch (Exception ex)
             {
                 return StatusCode(500, new { error = "Internal server error", details = ex.Message });

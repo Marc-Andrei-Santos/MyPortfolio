@@ -27,7 +27,7 @@ namespace MyPortfolio.Services
         }
 
         public async Task<string> GetChatbotResponseAsync(string userInput)
-        {
+        {   
             if (string.IsNullOrWhiteSpace(userInput))
                 return "Please type something so I can reply. 😊";
 

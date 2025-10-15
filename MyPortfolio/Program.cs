@@ -1,6 +1,14 @@
+﻿using MyPortfolio.Services;
+using Microsoft.Extensions.Configuration;
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.Configure<EmailJSOptions>(
+    builder.Configuration.GetSection("EmailJSOptions")
+);
+
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<AIChatbotService>();
 
 var app = builder.Build();
 

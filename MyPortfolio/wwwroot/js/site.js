@@ -159,19 +159,24 @@ document.getElementById("certificatePreviewModal").addEventListener("click", fun
 });
 
 
-// PRELOADER
-
+// LOADER
 window.addEventListener("load", function () {
-            const preloader = document.getElementById("preloader");
-            const wrapper = document.getElementById("site-wrapper");
+    const preloader = document.getElementById("loader");
+    const wrapper = document.getElementById("site-wrapper");
 
+    if (!preloader || !wrapper) {
+        console.warn("Loader or wrapper not found.");
+        return;
+    }
 
-            preloader.classList.add("fade-out");
-            setTimeout(() => {
-                wrapper.classList.add("show");
-                preloader.style.display = "none";
-            }, 500);
-        });
+    preloader.classList.add("fade-out");
+
+    setTimeout(() => {
+        wrapper.classList.add("show");
+        preloader.style.display = "none";
+    }, 500);
+});
+
 
 
 // 404 ERROR PAGE JS

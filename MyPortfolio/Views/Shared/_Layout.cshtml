@@ -10,25 +10,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
     <link rel="icon" type="image/png" href="~/images/coding.jpg" />
 
 </head>
 
 <body>
 
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="ladder-loader">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
+    <span class="loader" id="loader"></span>
 
 
     <div id="site-wrapper" class="site-wrapper">
-        <!-- Header Section -->
         <header>
             <div class="mx-auto px-2 sm:px-4 lg:px-6" style="width: 82%;">
                 <nav class="px-6 py-6 flex items-center justify-between">
@@ -59,14 +52,12 @@
                     </ul>
 
 
-                    <!-- Hamburger Icon -->
                     <button class="block md:hidden group relative" id="hamburger">
                         <div class="w-8 h-1 bg-gray-200 mb-2"></div>
                         <div class="w-8 h-1 bg-gray-200 mb-2"></div>
                         <div class="w-8 h-1 bg-gray-200"></div>
                     </button>
 
-                    <!-- Mobile Menu -->
                     <ul id="mobile-menu" class="absolute top-0 right-0 w-9/12 bg-neutral h-screen transform -translate-x-full opacity-0 transition-all duration-500 flex flex-col items-center pt-12">
                         <li class="w-full">
                             <button id="close-btn" class="absolute top-5 right-5 text-white text-3xl">&times;</button>
@@ -97,17 +88,14 @@
             </div>
         </header>
 
-        <!-- Main Content -->
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
     <div id="chatbot-container">
-        <!-- Floating chat toggle button -->
         <button id="chat-toggle" class="chat-toggle"> 💬 </button>
 
-        <!-- Chat window -->
         <div id="chat-window" class="chat-window hidden">
             <div class="chat-header">
                 <div class="chat-header-left">
@@ -121,10 +109,8 @@
             </div>
 
             <div id="chatBox" class="chat-body">
-                <!-- Chat messages appear here -->
             </div>
 
-            <!-- Typing indicator -->
             <div id="typingIndicator" class="typing-indicator" style="display:none;">
                 Marc is typing...
             </div>
@@ -140,13 +126,19 @@
     </div>
 
 
-    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script src="~/js/chatbot.js"></script>
+    <script src="~/js/emailkey.js"></script>
+    <script src="~/js/email.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 
-   
+
 </body>
 </html>
