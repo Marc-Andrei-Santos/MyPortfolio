@@ -27,10 +27,8 @@
     setTimeout(() => $chatWindow.addClass("hidden"), 300);
   });
 
-  // Initial bot message
   appendMessage("bot", "Hi! 👋 Welcome to my Portfolio!", botPfp);
 
-  // Send message
   $chatForm.on("submit", function (e) {
     e.preventDefault();
     if (isBotTyping) return;
@@ -41,7 +39,6 @@
     appendMessage("user", userMsg);
     $userMessage.val("");
 
-    // Disable inputs while bot is typing
     isBotTyping = true;
     $userMessage.prop("disabled", true);
     $sendButton.prop("disabled", true).addClass("disabled");
@@ -65,7 +62,6 @@
             appendMessage("bot", "Sorry, there was a problem connecting to the chatbot service.", botPfp);
           },
           complete: function () {
-            // Re-enable sending
             isBotTyping = false;
             $userMessage.prop("disabled", false);
             $sendButton.prop("disabled", false).removeClass("disabled");
@@ -73,8 +69,8 @@
             $userMessage.focus();
           }
         });
-      }, 6000); 
-    }, 4000);
+      }, 5000); 
+    }, 3000);
   });
 
   // Append message
@@ -91,7 +87,6 @@
     $chatBox.scrollTop($chatBox[0].scrollHeight);
   }
 
-  // Typing animation
   function showTypingText() {
     if ($(".typing-text").length === 0) {
       const typingHTML = `

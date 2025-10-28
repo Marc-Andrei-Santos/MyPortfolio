@@ -45,7 +45,7 @@
                     <i class="fab fa-facebook"></i>
                 </a>
                 <!-- Instagram -->
-                <a href="https://www.instagram.com/_marcci.1/" target="_blank" class="hover:text-pink-500 transition">
+                <a href="https://www.instagram.com/marc.dev_/" target="_blank" class="hover:text-pink-500 transition">
                     <i class="fab fa-instagram"></i>
                 </a>
                 <!-- GitHub -->
@@ -78,6 +78,7 @@
 
 
 <!-- What I Bring to the Table -->
+
 <div class="bg-neutral min-h-screen flex items-start justify-center pt-16 overflow-x-hidden">
     <div class="max-w-6xl w-full mx-auto py-12 px-6 text-white">
 
@@ -98,7 +99,7 @@
             </h3>
             <br />
             <div class="flex flex-wrap lg:flex-nowrap justify-center gap-6 lg:w-4/5 overflow-hidden">
-                <!-- Reusable tooltip class applied -->
+
                 <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20 reveal-down">
                     <div class="w-12 h-12 flex items-center justify-center">
                         <img src="~/images/html.jpg" alt="HTML" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110">
@@ -158,7 +159,6 @@
             <br />
             <div class="flex flex-wrap lg:flex-nowrap justify-center gap-6 lg:w-4/5 overflow-hidden">
 
-                <!-- Each tooltip same fade animation -->
                 <div class="group flex flex-col items-center mt-3 transition-all duration-300 w-20 reveal-down">
                     <img src="~/images/C.png" alt="C#" class="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110">
                     <span class="text-white text-sm opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 mt-1 text-center transition-all duration-300 ease-in-out">C#</span>
@@ -544,157 +544,200 @@
 
     
 <!-- Experience -->
-
 <section id="experience" class="bg-gradient-to-br from-primary to-black">
     <div class="max-w-screen-xl mx-auto py-16 px-4">
-        <div class="text-center mb-12">
-            <h2 class="md:text-4xl text-3xl font-bold text-white mb-3 reveal-left">Experience</h2>
-            <p class="text-gray-300 leading-relaxed reveal-right">
+        <div class="text-center mb-16">
+            <h2 class="md:text-4xl text-3xl font-bold text-white mb-4 reveal-left">Experience</h2>
+            <p class="text-gray-300 text-base leading-relaxed reveal-right">
                 Here are some of my professional experiences.
             </p>
         </div>
 
         <div class="relative">
-            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 bg-primary h-full"></div>
+            <!-- Timeline vertical line -->
+            <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 bg-primary h-full z-0"></div>
 
             <!-- Experience 1 -->
-            <div class="mb-20 flex justify-start w-full relative reveal-left">
-                <div class="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-6 h-6 bg-white rounded-full border-4 border-primary z-10"></div>
-                <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-full h-1 bg-primary w-12 z-0"></div>
+            <div class="mb-24 flex justify-start w-full relative reveal-left">
+                <!-- Connector dot -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white z-20"></div>
 
-                <div class="w-1/2 pr-8 text-right">
-                    <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl shadow-lg hover:scale-[1.03] transition-transform">
+                <!-- Horizontal line from dot to card -->
+                <div class="absolute top-1/2 left-1/2 bg-primary h-1 w-[calc(50%-6rem)] z-10"></div>
 
-                        <div class="flex flex-col items-center text-center rounded-2xl py-10 px-6 gap-3">
+                <!-- Card -->
+                <div class="w-1/2 pr-10 text-right relative z-20">
+                    <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-3xl shadow-2xl min-h-[320px] p-6 hover:scale-[1.03] transition-transform">
+                        <div class="flex flex-row items-center justify-center p-10 gap-10">
+                            <!-- Image -->
                             <img src="~/images/code.jpg" alt="Software Developer"
-                                 class="w-28 h-28 rounded-full object-cover border-4 border-primary shadow-md" />
-                            <h3 class="text-xl font-semibold text-white">Software Developer</h3>
-                            <div>
-                                <span class="text-primary font-medium block">H2 Software Consulting Services</span>
+                                 class="w-44 h-44 object-cover rounded-2xl shadow-md" />
+
+                            <!-- Content -->
+                            <div class="flex flex-col text-left px-6">
+                                <h3 class="text-xl font-semibold text-white">Software Developer</h3>
+                                <span class="text-primary text-base font-medium mt-1">H2 Software Consulting Services</span>
                                 <span class="text-gray-300 text-sm">Pasig City, Metro Manila</span>
+                                <div class="text-gray-400 text-sm mt-1">August 2025 - Present</div>
                             </div>
-                            <div class="text-gray-400 text-sm">August 2025 - Present</div>
-                            <p class="text-gray-200 text-sm leading-relaxed text-center">
-                                Developed and maintained web applications, collaborated with the team to implement new features,
-                                optimized existing code for better performance, and ensured high-quality software delivery.
-                                Worked closely with clients to understand business requirements and translate them into functional solutions.
-                            </p>
                         </div>
                     </div>
+                </div>
+
+                <!-- Description -->
+                <div class="w-1/2 pl-10 flex items-center">
+                    <p class="text-gray-100 text-base leading-relaxed text-center">
+                        Developed and maintained web applications, collaborated with teams to implement new features,
+                        optimized existing code for performance, and delivered quality solutions that met client goals.
+                        This experience helped strengthen my ability to design scalable systems and manage time effectively.
+                        It also allowed me to mentor junior developers and enhance teamwork across multiple projects.
+                    </p>
                 </div>
             </div>
 
             <!-- Experience 2 -->
-            <div class="mb-20 flex justify-end w-full relative reveal-right">
-                <div class="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-6 h-6 bg-white rounded-full border-4 border-primary z-10"></div>
-                <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2 h-1 bg-primary w-12 z-0"></div>
+            <div class="mb-24 flex justify-end w-full relative reveal-right">
+                <!-- Connector dot -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white z-20"></div>
 
-                <div class="w-1/2 pl-8 text-left">
-                    <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl shadow-lg hover:scale-[1.03] transition-transform">
+                <!-- Horizontal line from dot to card -->
+                <div class="absolute top-1/2 right-1/2 bg-primary h-1 w-[calc(50%-6rem)] z-10"></div>
 
-                        <div class="flex flex-col items-center text-center rounded-2xl py-10 px-6 gap-3">
+                <!-- Description -->
+                <div class="w-1/2 pr-10 flex items-center justify-end">
+                    <p class="text-gray-100 text-base leading-relaxed text-center">
+                        Built and deployed custom .NET web apps for small businesses, improving efficiency and engagement.
+                        Managed full project lifecycles independently, enhancing problem-solving.
+                        It also enhanced my confidence in client interaction and project documentation practices.
+                        Over time, I refined my ability to deliver tailored software solutions that met diverse business needs.
+                    </p>
+                </div>
+
+                <!-- Card -->
+                <div class="w-1/2 pl-10 text-left relative z-20">
+                    <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-3xl shadow-2xl min-h-[320px] p-6 hover:scale-[1.03] transition-transform">
+                        <!-- flipped order -->
+                        <div class="flex flex-row-reverse items-center justify-center p-10 gap-10">
+
+                            <!-- Image (now on the right) -->
                             <img src="~/images/coding.jpg" alt=".Net Developer"
-                                 class="w-28 h-28 rounded-full object-cover border-4 border-primary shadow-md" />
-                            <h3 class="text-xl font-semibold text-white">Freelance .Net Developer</h3>
-                            <div>
-                                <span class="text-primary font-medium block">Self-Employed</span>
+                                 class="w-44 h-44 object-cover rounded-2xl shadow-md" />
+
+                            <!-- Content (now on the left) -->
+                            <div class="flex flex-col text-left px-6">
+                                <h3 class="text-xl font-semibold text-white">Freelance .Net Developer</h3>
+                                <span class="text-primary text-base font-medium mt-1">Self-Employed</span>
                                 <span class="text-gray-300 text-sm">Calapan City, Oriental Mindoro</span>
+                                <div class="text-gray-400 text-sm mt-1">May 2025 – Present</div>
                             </div>
-                            <div class="text-gray-400 text-sm">May 2025 – Present</div>
-                            <p class="text-gray-200 text-sm leading-relaxed text-center">
-                                Developed web applications as a freelance web developer.
-                                Collaborated with small businesses to create tailored solutions that improved efficiency and customer engagement.
-                                Enhanced problem-solving skills by managing projects independently and ensuring client satisfaction.
-                            </p>
+
                         </div>
                     </div>
                 </div>
+
             </div>
 
             <!-- Experience 3 -->
-            <div class="mb-20 flex justify-start w-full relative reveal-left">
-                <div class="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-6 h-6 bg-white rounded-full border-4 border-primary z-10"></div>
-                <div class="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-full h-1 bg-primary w-12 z-0"></div>
+            <div class="mb-24 flex justify-start w-full relative reveal-left">
+                <!-- Connector dot -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 top-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white z-20"></div>
 
-                <div class="w-1/2 pr-8 text-right">
-                    <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl shadow-lg hover:scale-[1.03] transition-transform">
+                <!-- Horizontal line from dot to card -->
+                <div class="absolute top-1/2 left-1/2 bg-primary h-1 w-[calc(50%-6rem)] z-10"></div>
 
-
-
-                        <div class="flex flex-col items-center text-center rounded-2xl py-10 px-6 gap-3">
+                <!-- Card -->
+                <div class="w-1/2 pr-10 text-right relative z-20">
+                    <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-3xl shadow-2xl min-h-[320px] p-6 hover:scale-[1.03] transition-transform">
+                        <div class="flex flex-row items-center justify-center p-10 gap-10">
+                            <!-- Image -->
                             <img src="~/images/exp1.png" alt="Desktop Engineer Intern"
-                                 class="w-28 h-28 rounded-full object-cover border-4 border-primary shadow-md" />
-                            <h3 class="text-xl font-semibold text-white">Desktop Engineer Intern</h3>
-                            <div>
-                                <span class="text-primary font-medium block">Teleperformance Inc.</span>
+                                 class="w-44 h-44 object-cover rounded-2xl shadow-md" />
+
+                            <!-- Content -->
+                            <div class="flex flex-col text-left px-6">
+                                <h3 class="text-xl font-semibold text-white">Desktop Engineer Intern</h3>
+                                <span class="text-primary text-base font-medium mt-1">Teleperformance Inc.</span>
                                 <span class="text-gray-300 text-sm">Makati City, Metro Manila</span>
+                                <div class="text-gray-400 text-sm mt-1">Feb 2025 – May 2025</div>
                             </div>
-                            <div class="text-gray-400 text-sm">Feb 2025 – May 2025</div>
-                            <p class="text-gray-200 text-sm leading-relaxed text-center">
-                                Assisted in troubleshooting both hardware and software issues, helped configure user systems to ensure
-                                stable performance and maintain productivity for daily business operations.
-                                Strengthened knowledge in system administration and user support through hands-on experience.
-                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <!-- Description -->
+                <div class="w-1/2 pl-10 flex items-center">
+                    <p class="text-gray-100 text-base leading-relaxed text-center">
+                        Assisted in diagnosing hardware and software issues, ensuring stable workstation performance
+                        and boosting user productivity. Gained solid experience in system administration and tech support.
+                        This internship provided a strong technical foundation and real-world troubleshooting skills.
+                        It also gave me valuable exposure to professional IT operations and best practices in system maintenance.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 
-<!-- Certifications  -->
-
+<!-- Certifications -->
 <section id="certifications" class="bg-neutral">
     <div class="max-w-screen-xl mx-auto py-16 px-4">
         <div class="text-center md:w-1/2 m-auto mb-10">
-            <h2 class="md:w-1/2 m-auto md:text-4xl text-3xl font-bold text-white mb-3 reveal-left">Certifications</h2>
-            <h4 class="font-bold text-medium text-gray-700 dark:text-gray-400 mb-2 reveal-right">What I Achieve</h4>
+            <h2 class="md:w-1/2 m-auto md:text-4xl text-3xl font-bold text-white mb-3">
+                Certifications
+            </h2>
+            <h4 class="font-bold text-medium text-gray-700 dark:text-gray-400 mb-2">
+                What I Achieve
+            </h4>
         </div>
 
         <div class="relative">
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 overflow-hidden">
 
                 <!-- Certificate 1 -->
-                <div class="certificate-card p-3 transform transition duration-300 hover:scale-102 reveal-left">
-                    <div class="certificate-inner rounded-lg bg-black/40 p-5 cursor-pointer">
-                        <img class="object-cover w-full h-72 rounded-lg mb-4"
+                <div class="p-3 transform transition duration-300 ease-in-out hover:scale-105 hover:z-10">
+                    <div class="rounded-lg bg-black/40 p-5 cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out">
+                        <img class="object-cover w-full h-72 rounded-lg mb-4 transition-transform duration-300 ease-in-out"
                              src="~/images/Certi1.jpg"
                              alt="Certificate 1"
-                             onclick="openCertificatePreview('Certi1.jpg')">
-                        <hr><br />
+                             onclick="openCertificatePreview('Certi1.jpg')" />
+                        <hr class="border-gray-600 my-4" />
                         <div class="text-center">
-                            <h4 class="text-gray-900 dark:text-white tracking-tight mb-2 text-xl">freeCodeCamp</h4>
+                            <h4 class="text-gray-900 dark:text-white tracking-tight mb-2 text-xl">
+                                freeCodeCamp
+                            </h4>
                         </div>
                     </div>
                 </div>
 
                 <!-- Certificate 2 -->
-                <div class="certificate-card p-3 transform transition duration-300 hover:scale-102 reveal-down">
-                    <div class="certificate-inner rounded-lg bg-black/40 p-5 cursor-pointer">
-                        <img class="object-cover w-full h-72 rounded-lg mb-4"
+                <div class="p-3 transform transition duration-300 ease-in-out hover:scale-105 hover:z-10">
+                    <div class="rounded-lg bg-black/40 p-5 cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out">
+                        <img class="object-cover w-full h-72 rounded-lg mb-4 transition-transform duration-300 ease-in-out"
                              src="~/images/codechum.png"
                              alt="Certificate 2"
-                             onclick="openCertificatePreview('codechum.png')">
-                        <hr><br />
+                             onclick="openCertificatePreview('codechum.png')" />
+                        <hr class="border-gray-600 my-4" />
                         <div class="text-center">
-                            <h4 class="text-gray-900 dark:text-white tracking-tight mb-2 text-xl">CodeChum</h4>
+                            <h4 class="text-gray-900 dark:text-white tracking-tight mb-2 text-xl">
+                                CodeChum
+                            </h4>
                         </div>
                     </div>
                 </div>
 
                 <!-- Certificate 3 -->
-                <div class="certificate-card p-3 transform transition duration-300 hover:scale-102 reveal-right">
-                    <div class="certificate-inner rounded-lg bg-black/40 p-5 cursor-pointer">
-                        <img class="object-cover w-full h-72 rounded-lg mb-4"
+                <div class="p-3 transform transition duration-300 ease-in-out hover:scale-105 hover:z-10">
+                    <div class="rounded-lg bg-black/40 p-5 cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out">
+                        <img class="object-cover w-full h-72 rounded-lg mb-4 transition-transform duration-300 ease-in-out"
                              src="~/images/bcrvcerti.png"
                              alt="Certificate 3"
-                             onclick="openCertificatePreview('bcrvcerti.png')">
-                        <hr><br />
+                             onclick="openCertificatePreview('bcrvcerti.png')" />
+                        <hr class="border-gray-600 my-4" />
                         <div class="text-center">
-                            <h4 class="text-gray-900 dark:text-white tracking-tight mb-2 text-xl">Java Programming Training Completion</h4>
+                            <h4 class="text-gray-900 dark:text-white tracking-tight mb-2 text-xl">
+                                Java Programming Training Completion
+                            </h4>
                         </div>
                     </div>
                 </div>
@@ -706,13 +749,12 @@
     <!-- Modal -->
     <div id="certificatePreviewModal"
          class="fixed inset-0 z-50 p-4 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden transition-opacity duration-300 ease-out">
-
         <div id="certificateModalContent"
              class="relative flex flex-col items-center w-full p-8 bg-gray-800 rounded-lg shadow-xl transform transition-all duration-300 ease-out scale-95 opacity-0 overflow-hidden"
              style="max-width:1000px; max-height:90vh; z-index:1000;">
             <div class="flex items-center justify-center w-full h-[500px]">
                 <img id="certificatePreviewImage"
-                     class="max-h-full max-w-[800px] object-contain rounded-lg transition-transform duration-500" />
+                     class="max-h-full max-w-[800px] object-contain rounded-lg transition-transform duration-300" />
             </div>
 
             <!-- Close Button -->
@@ -799,7 +841,7 @@
                      class="reveal-left"
                      alt="Contact Animation"
                      style="width: 420px; max-width: 100%; background: transparent;" />
-            </div>
+            </div>      
 
             <div class="w-full md:max-w-md text-center md:text-left space-y-4 text-base -mt-16 md:mt-0 reveal-right">
                 <!-- Contact Form -->

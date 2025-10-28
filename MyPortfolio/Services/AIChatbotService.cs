@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
+using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration;
 
 namespace MyPortfolio.Services
 {
@@ -15,8 +16,8 @@ namespace MyPortfolio.Services
         private readonly string[] _mistypedMessages = new[]
         {
         "I think you might have mistyped something. Could you try rephrasing your message?",
-        "I think you mistyped again 😅. Could you please type it properly?",
-        "Hmm… still seems off! 🤔 Try typing it carefully this time.",
+        "I think you mistyped again 😅. Try typing it carefully this time.",
+        "Hmm… still seems off! 🤔. Could you please type it properly?",
         "I'm having trouble understanding. Let's try that again! 😅"
     };
 

@@ -84,7 +84,7 @@
     height: 42px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid white;
+    border: 1px solid black;
 }
 
 .chat-title {
